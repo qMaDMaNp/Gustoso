@@ -1,0 +1,9 @@
+body {
+  background: red;
+}
+.logo h1 {
+  font-family: "Scriptina", sans-serif;
+}
+.overflow {
+  overflow: hidden;
+}
