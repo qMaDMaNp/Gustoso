@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/qMaDMaNp/Gustoso/issues"
   },
-  "homepage": "https://github.com/qMaDMaNp/Gustoso#readme"
+  "homepage": "https://github.com/qMaDMaNp/Gustoso#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "postcss": "^6.0.21",
+    "postcss-cssnext": "^3.1.0"
+  }
 }
