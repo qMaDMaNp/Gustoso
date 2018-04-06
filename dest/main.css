@@ -1,4 +1,16 @@
 
+:-webkit-full-screen {
+}
+
+:-moz-full-screen {
+}
+
+:-ms-fullscreen {
+}
+
+:fullscreen {
+}
+
 h1 {
 
     border: 1px solid black;
@@ -15,3 +27,5 @@ h1 {
 .overflow {
   overflow: hidden;
 }
+
+/*# sourceMappingURL=main.css.map */

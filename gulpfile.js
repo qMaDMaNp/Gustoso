@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 
 gulp.task('autoprefixer', function () {
-    return gulp.src('./src/style/*.pcss')
+    return gulp.src('./src/style/*.css')
         .pipe(sourcemaps.init())
         .pipe(postcss([ autoprefixer() ]))
         .pipe(sourcemaps.write('.'))
