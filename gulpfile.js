@@ -1,14 +1,13 @@
 'use strict'
-
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 gulp.task('autoprefixer', function () {
+  var processors = [
+    cssnano()
+  ];
     return gulp.src('./src/style/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer() ]))
-        .pipe(sourcemaps.write('.'))
+        .pipe(postcss(processors))
         .pipe(gulp.dest('./dest'));
 });
