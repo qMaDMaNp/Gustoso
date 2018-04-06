@@ -14,34 +14,74 @@
 }
 
 /* Common styles *//* Common styles *//* Common styles */
+
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding: 0
 }
-body h1 {
-    background: url('../img/hero.png');
+
+body h1, body h2, body h3, body h4, body h5 {
+    margin: 0;
 }
+
 body h3 {
     font-family: "AlegreyaBold", sans-serif;
 }
+
 body p {
     font-family: "ProximaRegular", sans-serif;
 }
-body body a {
+
+body a {
     font-weight: "AlegreyaRegular", sans-serif;
 }
 
+body ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
 .container {
-  max-width: 5;
+  margin: 0 auto;
+  max-width: 1260px;
   width: 100%;
 }
 
-.exam {
-  position: absolute;
-  size: 150px 200px;
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
+/* Main styles */
 /* Header *//* Header *//* Header */
+.page-header {
+  background: url('../img/hero.png') no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  height: 100vh;
+}
+
+.heading-logo {
+  float: left;
+  width: 140px;
+  height: 44px;
+}
+
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+.navigation-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
