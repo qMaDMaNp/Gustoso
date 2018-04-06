@@ -19,6 +19,7 @@ body {
   margin: 0;
   padding: 0;
 
+  @nest
   & :matches(h1, h2, h3, h4, h5) {
     margin: 0;
   }
@@ -29,7 +30,10 @@ body {
     font-family: "ProximaRegular", sans-serif;
   }
   & a {
-    font-weight: "AlegreyaRegular", sans-serif;
+    font-family: "AlegreyaRegular", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
   & ul {
     padding: 0;
@@ -38,7 +42,8 @@ body {
   }
 }
 
-.container {
+.container,
+.heading__container {
   margin: 0 auto;
   max-width: 1260px;
   width: 100%;
@@ -56,6 +61,12 @@ body {
 
 /* Main styles */
 /* Header *//* Header *//* Header */
+.heading {
+  background: rgba(86, 83, 76, 0.529);
+  height: 70px;
+  width: 100%;
+}
+
 .page-header {
   background: resolve("hero.png") no-repeat;
   background-position: 0% 0%;
@@ -63,17 +74,40 @@ body {
   height: 100vh;
 }
 
-.heading-logo {
+.heading-logo__link {
   float: left;
-  width: width("logo.png");
-  height: height("logo.png");
 }
 
 .navigation-list {
-  display: flex;
-  float: right;
+  float: left;
+  position: relative;
+  left: 15.7%;
+  &__item {
+    display: inline-block;
+
+      &:after {
+        content: "~";
+        color: #fff;
+        /* треба буде замінити на перемінну */
+        font-family: "AlegreyaRegular", sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        margin: 0 20px;
+      }
+      &:nth-of-type(5)::after {
+        display: none;
+      }
+  }
+
+  &__link {
+    color: #fff;
+  }
 }
 
-.navigation-list__item {
-  display: flex;
+.social-list {
+  float: right;
+
+  &__item {
+    display: inline-block;
+  }
 }

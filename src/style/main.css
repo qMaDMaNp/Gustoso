@@ -33,7 +33,10 @@ body p {
 }
 
 body a {
-    font-weight: "AlegreyaRegular", sans-serif;
+    font-family: "AlegreyaRegular", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 body ul {
@@ -42,7 +45,8 @@ body ul {
     list-style-type: none;
 }
 
-.container {
+.container,
+.heading__container {
   margin: 0 auto;
   max-width: 1260px;
   width: 100%;
@@ -60,6 +64,12 @@ body ul {
 
 /* Main styles */
 /* Header *//* Header *//* Header */
+.heading {
+  background: rgba(86, 83, 76, .529);
+  height: 70px;
+  width: 100%;
+}
+
 .page-header {
   background: url('../img/hero.png') no-repeat;
   background-position: 0% 0%;
@@ -67,21 +77,43 @@ body ul {
   height: 100vh;
 }
 
-.heading-logo {
+.heading-logo__link {
   float: left;
-  width: 140px;
-  height: 44px;
 }
 
 .navigation-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  float: right;
+  float: left;
+  position: relative;
+  left: 15.7%;
 }
 
 .navigation-list__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+    display: inline-block
+  }
+
+.navigation-list__item:after {
+    content: "~";
+    color: #fff;
+
+    /* треба буде замінити на перемінну */
+    font-family: "AlegreyaRegular", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 20px;
 }
+
+.navigation-list__item:nth-of-type(5)::after {
+    display: none;
+}
+
+.navigation-list__link {
+    color: #fff;
+  }
+
+.social-list {
+  float: right;
+}
+
+.social-list__item {
+    display: inline-block;
+  }
