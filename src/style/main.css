@@ -13,6 +13,16 @@
     src: url("../fonts/Alegreya/Alegreya-Bold.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "PlayfairRegular";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ScriptinaRegular";
+    src: url("../fonts/Scriptina/Scriptina-Regular.ttf") format("truetype");
+}
+
 /* Common styles *//* Common styles *//* Common styles */
 
 body {
@@ -20,7 +30,7 @@ body {
   padding: 0
 }
 
-body h1, body h2, body h3, body h4, body h5 {
+body h1, body h2, body h3, body h4, body h5, body p {
     margin: 0;
 }
 
@@ -30,13 +40,16 @@ body h3 {
 
 body p {
     font-family: "ProximaRegular", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.1em;
 }
 
 body a {
     font-family: "AlegreyaRegular", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 0.3em;
 }
 
 body ul {
@@ -64,56 +77,281 @@ body ul {
 
 /* Main styles */
 /* Header *//* Header *//* Header */
+.page-header {
+  background: url('../img/hero.png') no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  height: 100vh
+}
+.page-header::after {
+    content: url('../img/border_bullets.png');
+    position: absolute;
+    bottom: -57px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
 .heading {
   background: rgba(86, 83, 76, .529);
   height: 70px;
   width: 100%;
 }
 
-.page-header {
-  background: url('../img/hero.png') no-repeat;
-  background-position: 0% 0%;
-  background-size: cover;
-  height: 100vh;
-}
-
-.heading-logo__link {
-  float: left;
-}
-
-.navigation-list {
-  float: left;
-  position: relative;
-  left: 15.7%;
-}
-
-.navigation-list__item {
-    display: inline-block
+.heading__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
-.navigation-list__item:after {
+.heading-logo {
+  margin-top: 15px;
+}
+.navigation {
+  -webkit-box-flex: 0.14;
+      -ms-flex-positive: 0.14;
+          flex-grow: 0.14;
+}
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation-list__item:nth-of-type(-n+4)::after {
     content: "~";
     color: #fff;
 
     /* треба буде замінити на перемінну */
     font-family: "AlegreyaRegular", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 30px;
 }
-
-.navigation-list__item:nth-of-type(5)::after {
-    display: none;
-}
-
 .navigation-list__link {
-    color: #fff;
+    color: #fff
   }
+.navigation-list__link:hover {
+    color: #000;
+}
 
 .social-list {
-  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
 }
 
 .social-list__item {
+    margin-left: 28px
+      /* &:hover {
+        filter: blur(5px);
+      } */
+  }
+
+.social-list__item:nth-of-type(1) {
+    margin-left: 0;
+}
+
+.social-list__item:hover {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="5" /></filter></svg>#filter');
+        -webkit-filter: blur(5px);
+                filter: blur(5px);
+}
+
+.header-content__wrap {
+    max-width: 773px;
+    width: 100%;
+    margin: 225px auto 0;
+    text-align: center;
+    color: #fff;
+  }
+
+.header-content__big-text {
+    font-size: 92px;
+    font-family: "PlayfairRegular", sans-serif;
+    line-height: 0.261;
+    letter-spacing: 0.075em;
+    text-shadow: 0px 1px 0px rgba(61, 48, 41, .004);
+  }
+
+.header-content__big-text::after {
+    content: url('../img/dashed_line.png');
+    position: relative;
+    top: 75px;
+  }
+
+.header-content__small-text {
+    font-size: 24px;
+    font-family: "ProximaRegular";
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-shadow: 0px 1px 0px rgba(61, 48, 41, .004);
+    width: 550px;
+    margin: 130px auto 100px;
+  }
+
+.header-content__link {
+    color: #fff;
+  }
+
+.link-btn {
+      background: rgba(126, 123, 117, .63);
+      font-size: 15px;
+      font-family: "AlegreyaBold";
+      padding: 14px 44px;
+      font-weight: bold;
+      border: 1px dashed #9e9c93;
+      letter-spacing: 0.3em;
+      text-transform: uppercase
+}
+
+.link-btn:hover {
+    opacity: 0.5;
+}
+
+/* Cake Art *//* Cake Art *//* Cake Art */
+.cake-art-section {
+  background: url('../img/cake_art_bg.png'), no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.art-of-cakes {
+  max-width: 630px;
+  width: 100%;
+  float: left;
+}
+
+.art-of-cakes__header {
+    font-size: 48px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #56534c;
+    line-height: 1.625;
+    letter-spacing: 0.025em;
+  }
+
+.art-of-cakes__under-header {
+    font-size: 15px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #a47d5e;
+    text-transform: uppercase;
+    line-height: 0.625;
+    margin-bottom: 70px;
+  }
+
+.art-of-cakes__small-text {
+    color: #56534c;
+    line-height: 1.714;
+    width: 525px;
+    margin: 0 auto;
+  }
+
+.chef-cook__chef {
+    font-size: 24px;
+    font-family: "AlegreyaBold";
+    color: #56534c;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    margin-top: 47px;
+  }
+
+.chef-cook__wrap {
+    margin-top: 47px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+.chef-cook__name,
+  .chef-cook__surname {
+    font-size: 24px;
+    font-family: "AlegreyaBold";
+    color: #56534c;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+
+    border-top: 1px solid rgba(86, 83, 76, .4);
+    border-bottom: 1px solid rgba(86, 83, 76, .4);
+    padding: 15px 0;
+    width: 111px;
+  }
+
+.chef-cook__photo-wrap {
+    width: 103px;
+    height: 103px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 23px;
+  }
+
+.chef-cook__text-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 24px auto 0;
+    width: 435px;
+    height: 108px;
+  }
+
+.chef-cook__left-clip {
+    font-size: 60px;
+    height: 32px;
+    color: rgba(86, 83, 76, .4);
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+
+.chef-cook__right-clip {
+    font-size: 60px;
+    height: 32px;
+    color: rgba(86, 83, 76, .4);
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+
+.chef-cook__sign {
+    font-size: 24px;
+    font-family: "ScriptinaRegular", sans-serif;
+    color: #a47d5e;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    width: 285px;
+    margin: 0 auto;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+.tastes-good-list {
+  float: left;
+  max-width: 630px;
+  width: 100%;
+}
+
+.tastes-good-list__item {
     display: inline-block;
+  }
+
+.tastes-good-list__img-wrap {
+
+  }
+
+.tastes-good-list__img {
+
   }

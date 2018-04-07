@@ -13,6 +13,16 @@
     src: url("../fonts/Alegreya/Alegreya-Bold.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "PlayfairRegular";
+    src: url("../fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ScriptinaRegular";
+    src: url("../fonts/Scriptina/Scriptina-Regular.ttf") format("truetype");
+}
+
 /* Common styles *//* Common styles *//* Common styles */
 
 body {
@@ -20,7 +30,7 @@ body {
   padding: 0;
 
   @nest
-  & :matches(h1, h2, h3, h4, h5) {
+  & :matches(h1, h2, h3, h4, h5, p) {
     margin: 0;
   }
   & h3 {
@@ -28,12 +38,15 @@ body {
   }
   & p {
     font-family: "ProximaRegular", sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.1em;
   }
   & a {
     font-family: "AlegreyaRegular", sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing: 0.3em;
   }
   & ul {
     padding: 0;
@@ -61,53 +74,251 @@ body {
 
 /* Main styles */
 /* Header *//* Header *//* Header */
-.heading {
-  background: rgba(86, 83, 76, 0.529);
-  height: 70px;
-  width: 100%;
-}
-
 .page-header {
   background: resolve("hero.png") no-repeat;
   background-position: 0% 0%;
   background-size: cover;
   height: 100vh;
+
+  &::after {
+    content: resolve('border_bullets.png');
+    position: absolute;
+    bottom: -57px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
-.heading-logo__link {
-  float: left;
+.heading {
+  background: rgba(86, 83, 76, 0.529);
+  height: 70px;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
+.heading-logo {
+  margin-top: 15px;
+}
+.navigation {
+  flex-grow: 0.14;
+}
 .navigation-list {
-  float: left;
-  position: relative;
-  left: 15.7%;
-  &__item {
-    display: inline-block;
+  display: flex;
 
-      &:after {
-        content: "~";
-        color: #fff;
-        /* треба буде замінити на перемінну */
-        font-family: "AlegreyaRegular", sans-serif;
-        font-size: 20px;
-        text-decoration: none;
-        margin: 0 20px;
-      }
-      &:nth-of-type(5)::after {
-        display: none;
+  &__item {
+
+    &:nth-of-type(-n+4)::after {
+      content: "~";
+      color: #fff;
+      /* треба буде замінити на перемінну */
+      font-family: "AlegreyaRegular", sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      margin: 0 30px;
+    }
+  }
+  &__link {
+    color: #fff;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  margin-top: 5px;
+
+  &__item {
+    margin-left: 28px;
+      /* &:hover {
+        filter: blur(5px);
+      } */
+      &:nth-of-type(1) {
+        margin-left: 0;
       }
   }
+}
 
+.social-list__item:hover {
+        filter: blur(5px);
+}
+
+.header-content {
+
+  &__wrap {
+    max-width: 773px;
+    width: 100%;
+    margin: 225px auto 0;
+    text-align: center;
+    color: #fff;
+  }
+  &__big-text {
+    font-size: 92px;
+    font-family: "PlayfairRegular", sans-serif;
+    line-height: 0.261;
+    letter-spacing: 0.075em;
+    text-shadow: 0px 1px 0px rgba(61, 48, 41, 0.004);
+  }
+  &__big-text::after {
+    content: resolve('dashed_line.png');
+    position: relative;
+    top: 75px;
+  }
+  &__small-text {
+    font-size: 24px;
+    font-family: "ProximaRegular";
+    color: rgb(255, 255, 255);
+    line-height: 1.5;
+    text-shadow: 0px 1px 0px rgba(61, 48, 41, 0.004);
+    width: 550px;
+    margin: 130px auto 100px;
+  }
   &__link {
     color: #fff;
   }
 }
 
-.social-list {
-  float: right;
+.link-btn {
+      background: rgba(126, 123, 117, 0.63);
+      font-size: 15px;
+      font-family: "AlegreyaBold";
+      padding: 14px 44px;
+      font-weight: bold;
+      border: 1px dashed #9e9c93;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+
+      &:hover {
+        opacity: 0.5;
+      }
+}
+
+/* Cake Art *//* Cake Art *//* Cake Art */
+.cake-art-section {
+  background: resolve('cake_art_bg.png'), no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.art-of-cakes {
+  max-width: 630px;
+  width: 100%;
+  float: left;
+
+  &__header {
+    font-size: 48px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #56534c;
+    line-height: 1.625;
+    letter-spacing: 0.025em;
+  }
+  &__under-header {
+    font-size: 15px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #a47d5e;
+    text-transform: uppercase;
+    line-height: 0.625;
+    margin-bottom: 70px;
+  }
+  &__small-text {
+    color: #56534c;
+    line-height: 1.714;
+    width: 525px;
+    margin: 0 auto;
+  }
+}
+
+.chef-cook {
+
+
+  &__chef {
+    font-size: 24px;
+    font-family: "AlegreyaBold";
+    color: #56534c;
+    font-weight: bold;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    margin-top: 47px;
+  }
+  &__wrap {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__name,
+  &__surname {
+    font-size: 24px;
+    font-family: "AlegreyaBold";
+    color: #56534c;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+
+    border-top: 1px solid rgba(86, 83, 76, .4);
+    border-bottom: 1px solid rgba(86, 83, 76, .4);
+    padding: 15px 0;
+    width: 111px;
+  }
+  &__photo-wrap {
+    width: 103px;
+    height: 103px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 23px;
+  }
+  &__text-wrap {
+    display: flex;
+    margin: 24px auto 0;
+    width: 435px;
+    height: 108px;
+  }
+  &__left-clip {
+    font-size: 60px;
+    height: 32px;
+    color: rgba(86, 83, 76, .4);
+    align-self: flex-start;
+  }
+  &__right-clip {
+    font-size: 60px;
+    height: 32px;
+    color: rgba(86, 83, 76, .4);
+    align-self: flex-end;
+  }
+  &__sign {
+    font-size: 24px;
+    font-family: "ScriptinaRegular", sans-serif;
+    color: #a47d5e;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    width: 285px;
+    margin: 0 auto;
+    align-self: center;
+  }
+}
+
+.tastes-good-list {
+  float: left;
+  max-width: 630px;
+  width: 100%;
 
   &__item {
     display: inline-block;
+  }
+  &__img-wrap {
+
+  }
+  &__img {
+
   }
 }
