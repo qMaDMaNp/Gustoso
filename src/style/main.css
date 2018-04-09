@@ -294,7 +294,7 @@ body ul {
     width: 111px;
   }
 
-.chef-cook__photo-wrap {
+.chef-cook__img-wrap {
     width: 103px;
     height: 103px;
     overflow: hidden;
@@ -381,18 +381,17 @@ body ul {
   background: url('../img/dishes_bg.png'), no-repeat;
   background-size: cover;
   padding-top: 140px;
-  padding-bottom: 140px;
+  padding-bottom: 120px;
+
 }
-.dishes-section__container {
-    max-width: 1170px;
-    width: 100%;
-    margin: 0 auto;
-  }
 
 .dishes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 965px;
+
+  margin-left: 95px;
 }
 
 .dishes-left-wrap {
@@ -402,16 +401,18 @@ body ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
--webkit-box-pack: start;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: url('../img/pancakes.png'), no-repeat;
   background-size: cover;
-  background-position-x: 67%;
   max-width: 420px;
   width: 100%;
   height: 513px;
-  overflow: hidden
+  -webkit-box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
+          box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
+  border-bottom-left-radius: 74px
+
 }
 
 .dishes-left-wrap .stars-list {
@@ -424,9 +425,9 @@ body ul {
       font-size: 20px;
 }
 
-.dishes-left-wrap__big-img {}
-
 .dishes-right-wrap {
+  -webkit-box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
+          box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -437,14 +438,18 @@ body ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: url('../img/windmill.png'), #fff;
+  background-repeat: no-repeat;
+  background-position: bottom right;
   max-width: 545px;
   width: 100%;
-  padding: 80px 0 44px;
+  padding-top: 80px;
+  position: relative;
 }
 
 .dishes-right-wrap__text {
     text-align: left;
+    margin-bottom: 90px;
   }
 
 .dishes-right-wrap__header {
@@ -460,7 +465,7 @@ body ul {
     color: #a47d5e;
     text-transform: uppercase;
     line-height: 0.625;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
   }
 
 .dishes-right-wrap__small-text {
@@ -468,4 +473,82 @@ body ul {
     line-height: 1.714;
     font-weight: bold;
     width: 428px;
+  }
+
+.dishes-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dishes-slider__btn-left,
+  .dishes-slider__btn-right {
+    padding: 0;
+    border: 0;
+    background: none;
+    width: 32px;
+    height: 32px;
+  }
+
+.dishes-slider-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dishes-slider-list__item {
+    margin: 0 15px;
+  }
+
+.dishes-slider-list__img-wrap {
+
+  }
+
+.dishes-slider-list__img {
+    width: 93px;
+    height: 93px;
+    overflow: hidden;
+    border-radius: 100%;
+  }
+
+.ready-in {
+  width: 203px;
+  height: 203px;
+  background: url('../img/ready_in_bg.png');
+  position: absolute;
+  top: -8%;
+  right: -19%;
+  -webkit-box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
+          box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
+  text-align: center;
+
+}
+
+.ready-in__header {
+    font-family: "AlegreyaBold", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a47d5e;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+.ready-in__number {
+    font-family: "AlegreyaBold", sans-serif;
+    font-size: 92px;
+    letter-spacing: 0.1em;
+        line-height: 0.9;
+    text-transform: uppercase;
+    color: #dfc691;
+  }
+
+.ready-in__text {
+    font-family: "AlegreyaBold", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: #979285;
   }
