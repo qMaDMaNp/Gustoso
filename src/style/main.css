@@ -555,6 +555,7 @@ body ul {
 .breakfast-section {
   background: url('../img/breakfast.png'), no-repeat;
   background-size: cover;
+  background-position: 0 50%;
   padding-top: 89px;
   padding-bottom: 89px;
 }
