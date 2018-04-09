@@ -614,25 +614,37 @@ body ul {
   width: 440px;
   height: 600px;
   background: url('../img/bg.png');
+  margin-top: 23px;
 }
 
-.paper-dash {
-  position: absolute;
-  width: 420px;
-  height: 579px;
-  margin: 10px;
-  background-image:
--webkit-gradient(linear, left top, left bottom, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
--webkit-gradient(linear, left top, left bottom, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
--webkit-gradient(linear, left top, right top, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
--webkit-gradient(linear, left top, right top, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0)));
-  background-image:
-linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
-linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
-linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%),
-linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%);
-  background-position: left, right, top, bottom;
-  background-size: 1px 16.5px, 1px 16.5px, 16.5px 1px, 16.5px 1px;
-  background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
-  
-}
+.paper-sheet__dash {
+    position: absolute;
+    width: 420px;
+    height: 579px;
+    margin: 10px;
+    background-image:
+    -webkit-gradient(linear, left top, left bottom, color-stop(34%, #9e9c93), color-stop(0%, rgba(158, 156, 147, 0))),
+    -webkit-gradient(linear, left top, left bottom, color-stop(34%, #9e9c93), color-stop(0%, rgba(158, 156, 147, 0))),
+    -webkit-gradient(linear, left top, right top, color-stop(34%, #9e9c93), color-stop(0%, rgba(158, 156, 147, 0))),
+    -webkit-gradient(linear, left top, right top, color-stop(34%, #9e9c93), color-stop(0%, rgba(158, 156, 147, 0)));
+    background-image:
+    linear-gradient(to bottom, #9e9c93 34%, rgba(158, 156, 147, 0) 0%),
+    linear-gradient(to bottom, #9e9c93 34%, rgba(158, 156, 147, 0) 0%),
+    linear-gradient(to right, #9e9c93 34%, rgba(158, 156, 147, 0) 0%),
+    linear-gradient(to right, #9e9c93 34%, rgba(158, 156, 147, 0) 0%);
+    background-position: left, right, top, bottom;
+    background-size: 1.5px 16.1px, 1.5px 16.1px, 16.1px 1.5px, 16.1px 1.5px;
+    background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
+  }
+
+.paper-sheet__corner {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -2%;
+    left: -11px;
+    border-top: 31px solid #f3f1e9;
+    border-left: 31px solid transparent;
+    -webkit-box-shadow: 7px -7px 57px -6px rgba(0, 0, 0, .75);
+            box-shadow: 7px -7px 57px -6px rgba(0, 0, 0, .75);
+  }
