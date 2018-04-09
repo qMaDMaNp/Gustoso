@@ -36,6 +36,8 @@ body h1, body h2, body h3, body h4, body h5, body p {
 
 body h3 {
     font-family: "AlegreyaBold", sans-serif;
+    color: #56534c;
+    font-weight: bold;
 }
 
 body p {
@@ -221,7 +223,8 @@ body ul {
   background-position: 0% 0%;
   background-size: cover;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 105px;
+  padding-bottom: 105px;
 }
 
 .art-of-cakes {
@@ -232,9 +235,6 @@ body ul {
 
 .art-of-cakes__header {
     font-size: 48px;
-    font-family: "AlegreyaBold", sans-serif;
-    font-weight: bold;
-    color: #56534c;
     line-height: 1.625;
     letter-spacing: 0.025em;
   }
@@ -246,12 +246,13 @@ body ul {
     color: #a47d5e;
     text-transform: uppercase;
     line-height: 0.625;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
 
 .art-of-cakes__small-text {
     color: #56534c;
     line-height: 1.714;
+    font-weight: bold;
     width: 525px;
     margin: 0 auto;
   }
@@ -342,16 +343,129 @@ body ul {
   float: left;
   max-width: 630px;
   width: 100%;
+  position: relative;
+  margin-top: 40px;
 }
 
 .tastes-good-list__item {
     display: inline-block;
+    max-width: 295px;
+    width: 100%;
+    height: 250px;
+    margin: 9px
   }
 
-.tastes-good-list__img-wrap {
+.tastes-good-list__item:hover {
+    position: relative;
+    z-index: 999;
+}
 
+.tastes-good-list__top-item {
+    position: absolute;
+    right: 12em;
+    top: 9em;
+    opacity: 0.92;
   }
 
 .tastes-good-list__img {
+    outline: 5px solid white;
+    outline-offset: -11px;
+  }
 
+.tastes-good-list__top-img {
+    outline: none;
+  }
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+.dishes-section {
+  background: url('../img/dishes_bg.png'), no-repeat;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.dishes-section__container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+.dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dishes-left-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+-webkit-box-pack: start;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+  background: url('../img/pancakes.png'), no-repeat;
+  background-size: cover;
+  background-position-x: 67%;
+  max-width: 420px;
+  width: 100%;
+  height: 513px;
+  overflow: hidden
+}
+
+.dishes-left-wrap .stars-list {
+    margin-left: 25px;
+}
+
+.dishes-left-wrap .stars-list__item {
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 20px;
+}
+
+.dishes-left-wrap__big-img {}
+
+.dishes-right-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  max-width: 545px;
+  width: 100%;
+  padding: 80px 0 44px;
+}
+
+.dishes-right-wrap__text {
+    text-align: left;
+  }
+
+.dishes-right-wrap__header {
+    font-size: 48px;
+    line-height: 1.625;
+    letter-spacing: 0.025em;
+  }
+
+.dishes-right-wrap__under-header {
+    font-size: 15px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #a47d5e;
+    text-transform: uppercase;
+    line-height: 0.625;
+    margin-bottom: 60px;
+  }
+
+.dishes-right-wrap__small-text {
+    color: #56534c;
+    line-height: 1.714;
+    font-weight: bold;
+    width: 428px;
   }

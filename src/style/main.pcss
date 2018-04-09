@@ -35,6 +35,8 @@ body {
   }
   & h3 {
     font-family: "AlegreyaBold", sans-serif;
+    color: #56534c;
+    font-weight: bold;
   }
   & p {
     font-family: "ProximaRegular", sans-serif;
@@ -206,7 +208,8 @@ body {
   background-position: 0% 0%;
   background-size: cover;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 105px;
+  padding-bottom: 105px;
 }
 
 .art-of-cakes {
@@ -216,9 +219,6 @@ body {
 
   &__header {
     font-size: 48px;
-    font-family: "AlegreyaBold", sans-serif;
-    font-weight: bold;
-    color: #56534c;
     line-height: 1.625;
     letter-spacing: 0.025em;
   }
@@ -229,11 +229,12 @@ body {
     color: #a47d5e;
     text-transform: uppercase;
     line-height: 0.625;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
   }
   &__small-text {
     color: #56534c;
     line-height: 1.714;
+    font-weight: bold;
     width: 525px;
     margin: 0 auto;
   }
@@ -311,14 +312,110 @@ body {
   float: left;
   max-width: 630px;
   width: 100%;
+  position: relative;
+  margin-top: 40px;
 
   &__item {
     display: inline-block;
-  }
-  &__img-wrap {
+    max-width: 295px;
+    width: 100%;
+    height: 250px;
+    margin: 9px;
 
+    &:hover {
+      position: relative;
+      z-index: 999;
+    }
+  }
+  &__top-item {
+    position: absolute;
+    right: 12em;
+    top: 9em;
+    opacity: 0.92;
   }
   &__img {
+    outline: 5px solid white;
+    outline-offset: -11px;
+  }
+  &__top-img {
+    outline: none;
+  }
+}
 
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+.dishes-section {
+  background: resolve('dishes_bg.png'), no-repeat;
+  background-size: cover;
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  &__container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.dishes {
+  display: flex;
+}
+
+.dishes-left-wrap {
+  display: flex;
+  align-items: center;
+justify-content: flex-start;
+  background: resolve("pancakes.png"), no-repeat;
+  background-size: cover;
+  background-position-x: 67%;
+  max-width: 420px;
+  width: 100%;
+  height: 513px;
+  overflow: hidden;
+
+  & .stars-list {
+    margin-left: 25px;  
+
+    &__item {
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+  &__big-img {
+
+  }
+}
+
+.dishes-right-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  max-width: calc(965px-420px);
+  width: 100%;
+  padding: 80px 0 44px;
+
+  &__text {
+    text-align: left;
+  }
+  &__header {
+    font-size: 48px;
+    line-height: 1.625;
+    letter-spacing: 0.025em;
+  }
+  &__under-header {
+    font-size: 15px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #a47d5e;
+    text-transform: uppercase;
+    line-height: 0.625;
+    margin-bottom: 60px;
+  }
+  &__small-text {
+    color: #56534c;
+    line-height: 1.714;
+    font-weight: bold;
+    width: 428px;
   }
 }
