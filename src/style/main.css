@@ -227,19 +227,20 @@ body ul {
   padding-bottom: 105px;
 }
 
-.art-of-cakes {
+.art-of-cakes,
+.breakfast {
   max-width: 630px;
   width: 100%;
   float: left;
 }
 
-.art-of-cakes__header {
+.art-of-cakes__header, .breakfast__header {
     font-size: 48px;
     line-height: 1.625;
     letter-spacing: 0.025em;
   }
 
-.art-of-cakes__under-header {
+.art-of-cakes__under-header, .breakfast__under-header {
     font-size: 15px;
     font-family: "AlegreyaBold", sans-serif;
     font-weight: bold;
@@ -249,7 +250,7 @@ body ul {
     margin-bottom: 60px;
   }
 
-.art-of-cakes__small-text {
+.art-of-cakes__small-text, .breakfast__small-text {
     color: #56534c;
     line-height: 1.714;
     font-weight: bold;
@@ -340,7 +341,7 @@ body ul {
   }
 
 .tastes-good-list {
-  float: left;
+  float: right;
   max-width: 630px;
   width: 100%;
   position: relative;
@@ -390,7 +391,6 @@ body ul {
   display: -ms-flexbox;
   display: flex;
   width: 965px;
-
   margin-left: 95px;
 }
 
@@ -412,7 +412,6 @@ body ul {
   -webkit-box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
           box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
   border-bottom-left-radius: 74px
-
 }
 
 .dishes-left-wrap .stars-list {
@@ -524,7 +523,6 @@ body ul {
   -webkit-box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
           box-shadow: 0px 13px 123px -5px rgba(125, 125, 125, 1);
   text-align: center;
-
 }
 
 .ready-in__header {
@@ -541,7 +539,7 @@ body ul {
     font-family: "AlegreyaBold", sans-serif;
     font-size: 92px;
     letter-spacing: 0.1em;
-        line-height: 0.9;
+    line-height: 0.9;
     text-transform: uppercase;
     color: #dfc691;
   }
@@ -552,3 +550,89 @@ body ul {
     letter-spacing: 0.1em;
     color: #979285;
   }
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+.breakfast-section {
+  background: url('../img/breakfast.png'), no-repeat;
+  background-size: cover;
+  padding-top: 89px;
+  padding-bottom: 89px;
+}
+.breakfast {
+  text-align: center;
+}
+.breakfast__header {
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+.breakfast__under-header {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: #c8a593;
+  }
+
+.breakfast-list__item {
+    margin-bottom: 51px;
+  }
+
+.breakfast-list__item:last-child {
+    margin-bottom: 0;
+  }
+
+.breakfast-list__meal {
+    font-size: 30px;
+    font-family: "AlegreyaBold";
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+
+.breakfast-list__meal-description {
+    font-size: 16px;
+    font-family: "ProximaRegular";
+    color: #c2beba;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin-top: 18px;
+    margin-bottom: 30px;
+  }
+
+.breakfast-list__price {
+    font-size: 36px;
+    font-family: "Alegreya";
+    color: #dfc691;
+    line-height: 0.833;
+    letter-spacing: 0.05em;
+  }
+
+.paper-sheet {
+  position: relative;
+  display: block;
+  float: right;
+  width: 440px;
+  height: 600px;
+  background: url('../img/bg.png');
+}
+
+.paper-dash {
+  position: absolute;
+  width: 420px;
+  height: 579px;
+  margin: 10px;
+  background-image:
+-webkit-gradient(linear, left top, left bottom, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
+-webkit-gradient(linear, left top, left bottom, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
+-webkit-gradient(linear, left top, right top, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0))),
+-webkit-gradient(linear, left top, right top, color-stop(34%, #333), color-stop(0%, rgba(158, 156, 147, 0)));
+  background-image:
+linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%);
+  background-position: left, right, top, bottom;
+  background-size: 1px 16.5px, 1px 16.5px, 16.5px 1px, 16.5px 1px;
+  background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
+  
+}

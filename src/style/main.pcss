@@ -212,7 +212,8 @@ body {
   padding-bottom: 105px;
 }
 
-.art-of-cakes {
+.art-of-cakes,
+.breakfast {
   max-width: 630px;
   width: 100%;
   float: left;
@@ -309,7 +310,7 @@ body {
 }
 
 .tastes-good-list {
-  float: left;
+  float: right;
   max-width: 630px;
   width: 100%;
   position: relative;
@@ -354,7 +355,6 @@ body {
 .dishes {
   display: flex;
   width: 965px;
-
   margin-left: 95px;
 }
 
@@ -369,7 +369,7 @@ body {
   height: 513px;
   box-shadow: 0px 13px 123px -5px rgba(125,125,125,1);
   border-bottom-left-radius: 74px;
-  
+
   & .stars-list {
     margin-left: 25px;
 
@@ -379,7 +379,6 @@ body {
       font-size: 20px;
     }
   }
-
 }
 
 .dishes-right-wrap {
@@ -475,7 +474,7 @@ body {
     font-family: "AlegreyaBold", sans-serif;
     font-size: 92px;
     letter-spacing: 0.1em;
-        line-height: 0.9;
+    line-height: 0.9;
     text-transform: uppercase;
     color: #dfc691;
   }
@@ -485,5 +484,86 @@ body {
     letter-spacing: 0.1em;
     color: #979285;
   }
+}
 
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+.breakfast-section {
+  background: resolve("breakfast.png"), no-repeat;
+  background-size: cover;
+  padding-top: 89px;
+  padding-bottom: 89px;
+}
+.breakfast {
+  text-align: center;
+
+
+  &__header {
+    font-size: 60px;
+    letter-spacing: 0.05em;
+    color: #fff;
+  }
+  &__under-header {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: #c8a593;
+  }
+}
+
+.breakfast-list {
+
+  &__item {
+    margin-bottom: 51px;
+  }
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+  &__meal {
+    font-size: 30px;
+    font-family: "AlegreyaBold";
+    color: #fff;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.05em;
+  }
+  &__meal-description {
+    font-size: 16px;
+    font-family: "ProximaRegular";
+    color: #c2beba;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    margin-top: 18px;
+    margin-bottom: 30px;
+  }
+  &__price {
+    font-size: 36px;
+    font-family: "Alegreya";
+    color: #dfc691;
+    line-height: 0.833;
+    letter-spacing: 0.05em;
+  }
+}
+
+.paper-sheet {
+  position: relative;
+  display: block;
+  float: right;
+  width: 440px;
+  height: 600px;
+  background: resolve("bg.png");
+}
+
+.paper-dash {
+  position: absolute;
+  width: 420px;
+  height: 579px;
+  margin: 10px;
+  background-image:
+linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to bottom, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%),
+linear-gradient(to right, #333 34%, rgba(158, 156, 147, 0) 0%);
+  background-position: left, right, top, bottom;
+  background-size: 1px 16.5px, 1px 16.5px, 16.5px 1px, 16.5px 1px;
+  background-repeat: repeat-y, repeat-y, repeat-x, repeat-x;
+  
 }
