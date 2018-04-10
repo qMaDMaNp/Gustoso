@@ -204,7 +204,7 @@ body {
 
 /* Cake Art *//* Cake Art *//* Cake Art */
 .cake-art-section {
-  background: resolve('cake_art_bg.png'), no-repeat;
+  background: resolve('cake_art_bg.png') no-repeat;
   background-position: 0% 0%;
   background-size: cover;
   text-align: center;
@@ -242,7 +242,6 @@ body {
 }
 
 .chef-cook {
-
 
   &__chef {
     font-size: 24px;
@@ -345,7 +344,7 @@ body {
 
 /* Dishes Section *//* Dishes Section *//* Dishes Section */
 .dishes-section {
-  background: resolve('dishes_bg.png'), no-repeat;
+  background: resolve('dishes_bg.png') no-repeat;
   background-size: cover;
   padding-top: 140px;
   padding-bottom: 120px;
@@ -362,7 +361,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: resolve("pancakes.png"), no-repeat;
+  background: resolve("pancakes.png") no-repeat;
   background-size: cover;
   max-width: 420px;
   width: 100%;
@@ -488,7 +487,7 @@ body {
 
 /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
 .breakfast-section {
-  background: resolve("breakfast.png"), no-repeat;
+  background: resolve("breakfast.png") no-repeat;
   background-size: cover;
   background-position: 0 50%;
   padding-top: 89px;
@@ -550,13 +549,16 @@ body {
   float: right;
   width: 440px;
   height: 600px;
-  background: resolve("bg.png");
+  background: resolve("wheat.png"), resolve("bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 275% 120%, 0 0;
   margin-top: 23px;
 
   &__dash {
     position: absolute;
     width: 420px;
     height: 579px;
+    top: 0;
     margin: 10px;
     background-image:
     linear-gradient(to bottom, #9e9c93 34%, rgba(158, 156, 147, 0) 0%),
@@ -571,10 +573,202 @@ body {
     position: absolute;
     width: 0;
     height: 0;
-    bottom: -2%;
-    left: -10.5px;
+    bottom: -1px;
+    left: -1px;
     border-top: 31px solid #f3f1e9;
     border-left: 31px solid transparent;
     box-shadow: 7px -7px 57px -6px rgba(0,0,0,0.75);
+  }
+}
+
+.paper-sheet-top {
+  display: flex;
+  justify-content: space-around;
+  height: 137px;
+  margin-top: 60px;
+  background: resolve("line.png"), resolve("precel.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 40%, 50% 43%;
+
+  &__est,
+  &__year {
+    font-size: 15px;
+    font-family: "AlegreyaBold", sans-serif;
+    font-weight: bold;
+    color: #56534c;
+  }
+}
+
+.paper-sheet-content {
+  text-align: center;
+
+  &__header {
+    font-size: 44px;
+    font-family: "AlegreyaBold", sans-serif;
+    color: rgb(86, 83, 76);
+    font-weight: bold;
+    line-height: 1.364;
+    letter-spacing: 0.025em;
+    width: 350px;
+    margin: 0 auto 25px;
+  }
+  &__small-text {
+    font-size: 15px;
+    font-family: "ProximaRegular", sans-serif;
+    font-weight: 200;
+    color: rgb(86, 83, 76);
+    line-height: 2.143;
+    letter-spacing: 0.05em;
+    width: 350px;
+    margin: 0 auto 60px;
+  }
+  &__link {
+    background: transparent;
+    border: 1px solid #9e9c93;
+    padding: 14px 60px;
+    color: #a47d5e;
+
+    &:hover {
+      background: red;
+    }
+  }
+}
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+.page-footer {
+  text-align: center;
+  background: rgb(243, 241, 233);
+  padding-top: 5px;
+
+  &__header {
+    font-size: 48px;
+    font-family: "AlegreyaBold", sans-serif;
+    color: #56534c;
+    font-weight: bold;
+    line-height: 0.625;
+    letter-spacing: 0.025em;
+    padding-top: 100px;
+    margin-bottom: 15px;
+
+    background: resolve("windmill-small.png") no-repeat;
+    background-position: 50% 0;
+  }
+  &__under-header {
+    font-size: 14px;
+    font-family: "AlegreyaBold", sans-serif;
+    color: #a47d5e;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 0.625;
+    letter-spacing: 0.1em;
+  }
+}
+
+.page-footer-list {
+  float: left;
+  &__item {
+    width: 312px;
+    margin-bottom: 50px;
+  }
+  &__img-wrap {
+    width: 103px;
+    height: 103px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 0 auto 22px;
+  }
+  &__header {
+    font-size: 30px;
+    font-family: "AlegreyaBold", sans-serif;
+    color: #a47d5e;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.025em;
+    margin-bottom: 22px;
+  }
+  &__text {
+    font-size: 14px;
+    font-family: "ProximaRegular";
+    color: #56534c;
+    line-height: 1.429;
+    letter-spacing: 0.1em;
+  }
+}
+
+.page-footer-right-wrap {
+  float: right;
+  margin-top: 100px;
+  position: relative;
+
+   &__img-wrap {
+    overflow: hidden;
+    width: 830px;
+    height: 546px;
+    border: 10px solid #fff;
+  }
+}
+
+.ready-in-list {
+  position: absolute;
+  top: -22px;
+  right: 8px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 203px;
+    height: 203px;
+    background: #fff;
+    text-align: center;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      width: 200px;
+      height: 200px;
+      margin: 2px auto;
+      background: rgba(255,255,255, 0.8);
+    }
+    &:nth-of-type(3) {
+      box-shadow: 0px 19px 84px -14px rgba(145,145,145,1);
+              background: resolve("ready_in_bg.png") no-repeat;
+              background-size: cover;
+
+      & .ready-in-list__number {
+        font-size: 92px;
+        letter-spacing: 0.1em;
+        line-height: 0.9;
+        color: #dfc691;
+      }
+      & .ready-in-list__header {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__header {
+    font-size: 18px;
+    font-family: "AlegreyaBold";
+    color: #a47d5e;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 0.667;
+    letter-spacing: 0.1em;
+  }
+  &__number {
+    font-size: 60px;
+    font-family: "AlegreyaBold";
+    color: #56534c;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.667;
+    letter-spacing: 0.1em;
+  }
+  &__text {
+    font-size: 18px;
+    font-family: "AlegreyaBold";
+    color: #979285;
+    font-weight: bold;
+    line-height: 1.667;
+    letter-spacing: 0.1em;
   }
 }
