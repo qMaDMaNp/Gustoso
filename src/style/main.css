@@ -788,6 +788,19 @@ body ul {
     border: 10px solid #fff;
   }
 
+.page-footer-right-wrap__link {
+    background: #fff;
+    color: #dfc691;
+    border-color: #dfc691;
+    padding-left: 29px;
+    padding-right: 29px;
+    letter-spacing: 0.05em;
+
+    position: absolute;
+    bottom: -15px;
+    left: -15px;
+  }
+
 .ready-in-list {
   position: absolute;
   top: -22px;
