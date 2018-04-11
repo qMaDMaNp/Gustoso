@@ -58,7 +58,8 @@ body {
 }
 
 .container,
-.heading__container {
+.heading__container,
+.page-footer-bottom-wrap {
   margin: 0 auto;
   max-width: 1260px;
   width: 100%;
@@ -639,6 +640,7 @@ body {
   text-align: center;
   background: rgb(243, 241, 233);
   padding-top: 5px;
+  padding-bottom: 70px;
 
   &__header {
     font-size: 48px;
@@ -666,6 +668,7 @@ body {
 
 .page-footer-list {
   float: left;
+
   &__item {
     width: 312px;
     margin-bottom: 50px;
@@ -696,15 +699,16 @@ body {
 }
 
 .page-footer-right-wrap {
-  float: right;
   margin-top: 100px;
   position: relative;
+  float: right;
 
    &__img-wrap {
     overflow: hidden;
     width: 830px;
     height: 546px;
     border: 10px solid #fff;
+      box-shadow: 0px 19px 84px -14px rgba(145,145,145,1);
   }
   &__link {
     background: #fff;
@@ -743,8 +747,8 @@ body {
     }
     &:nth-of-type(3) {
       box-shadow: 0px 19px 84px -14px rgba(145,145,145,1);
-              background: resolve("ready_in_bg.png") no-repeat;
-              background-size: cover;
+      background: resolve("ready_in_bg.png") no-repeat;
+      background-size: cover;
 
       & .ready-in-list__number {
         font-size: 92px;
@@ -782,5 +786,59 @@ body {
     font-weight: bold;
     line-height: 1.667;
     letter-spacing: 0.1em;
+  }
+}
+
+.page-footer-bottom-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.page-footer__link {
+  align-self: center;
+}
+
+.bottom-list {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    border-top: 1px solid rgba(86, 83, 76, .4);
+    border-bottom: 1px solid rgba(86, 83, 76, .4);
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+     &:nth-of-type(n+1):nth-of-type(-n+2)::after {
+      content: "~";
+      color: #000;
+      font-family: "AlegreyaRegular", sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      margin: 0 30px;
+    }
+    &:nth-of-type(n+5):nth-of-type(-n+6)::after {
+      content: "~";
+      color: #000;
+      font-family: "AlegreyaRegular", sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+      margin: 0 30px;
+    }
+    &:first-child {
+      padding-left: 45px
+    }
+    &:last-child {
+      padding-right: 45px;
+    }
+  }
+  &__link {
+    color: #56534c;
+    font-weight: bold;
+
+    &:hover {
+      color: red;
+    }
   }
 }

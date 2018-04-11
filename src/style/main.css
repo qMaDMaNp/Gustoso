@@ -61,7 +61,8 @@ body ul {
 }
 
 .container,
-.heading__container {
+.heading__container,
+.page-footer-bottom-wrap {
   margin: 0 auto;
   max-width: 1260px;
   width: 100%;
@@ -716,6 +717,7 @@ body ul {
   text-align: center;
   background: rgb(243, 241, 233);
   padding-top: 5px;
+  padding-bottom: 70px;
 }
 .page-footer__header {
     font-size: 48px;
@@ -776,9 +778,9 @@ body ul {
   }
 
 .page-footer-right-wrap {
-  float: right;
   margin-top: 100px;
   position: relative;
+  float: right;
 }
 
 .page-footer-right-wrap__img-wrap {
@@ -786,6 +788,8 @@ body ul {
     width: 830px;
     height: 546px;
     border: 10px solid #fff;
+      -webkit-box-shadow: 0px 19px 84px -14px rgba(145, 145, 145, 1);
+              box-shadow: 0px 19px 84px -14px rgba(145, 145, 145, 1);
   }
 
 .page-footer-right-wrap__link {
@@ -878,3 +882,73 @@ body ul {
     line-height: 1.667;
     letter-spacing: 0.1em;
   }
+
+.page-footer-bottom-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+}
+
+.page-footer__link {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.bottom-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom-list__item {
+    border-top: 1px solid rgba(86, 83, 76, .4);
+    border-bottom: 1px solid rgba(86, 83, 76, .4);
+    padding-top: 30px;
+    padding-bottom: 30px
+  }
+
+.bottom-list__item:nth-of-type(n+1):nth-of-type(-n+2)::after {
+    content: "~";
+    color: #000;
+    font-family: "AlegreyaRegular", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+.bottom-list__item:nth-of-type(n+5):nth-of-type(-n+6)::after {
+    content: "~";
+    color: #000;
+    font-family: "AlegreyaRegular", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+.bottom-list__item:first-child {
+    padding-left: 45px;
+}
+
+.bottom-list__item:last-child {
+    padding-right: 45px;
+}
+
+.bottom-list__link {
+    color: #56534c;
+    font-weight: bold
+  }
+
+.bottom-list__link:hover {
+    color: red;
+}
