@@ -544,16 +544,36 @@ body {
   }
 }
 
-.paper-sheet {
+.paper-sheet-wrap {
   position: relative;
   display: block;
   float: right;
   width: 440px;
   height: 600px;
+  margin-top: 23px;
+}
+
+.paper-sheet-bg {
+
+  &__first {
+    position: absolute;
+    top: 4%;
+    right: -16px;
+  }
+  &__second {
+    position: absolute;
+    top: 8%;
+    right: -30px;
+  }
+}
+
+.paper-sheet {
+  position: absolute;
+  width: 440px;
+  height: 600px;
   background: resolve("wheat.png"), resolve("bg.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: 275% 120%, 0 0;
-  margin-top: 23px;
+  background-position: 281% 120%, 0 0;
 
   &__dash {
     position: absolute;
