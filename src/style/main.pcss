@@ -1,14 +1,17 @@
 :root {
   --black: #000;
   --white: #fff;
+  --gold: #dfc691;
+  --borderGrey: #9e9c93;
   --textGrey: #56534c;
   --textGold: #a47d5e;
-  --borderGrey: #9e9c93;
-  --gold: #dfc691;
+  --textUp: uppercase;
   --marginCenter: 0 auto;
   --fontAleReg: "AlegreyaRegular", sans-serif;
   --fontAleBol: "AlegreyaBold", sans-serif;
   --fontProReg: "ProximaRegular", sans-serif;
+  --fontBold: bold;
+  --contWidth: 1260px;
 }
 
 @font-face {
@@ -48,7 +51,7 @@ body {
   & h3 {
     font-family: var(--fontAleBol);
     color: var(--textGrey);
-    font-weight: bold;
+    font-weight: var(--fontBold);;
   }
   & p {
     font-family: var(--fontProReg);
@@ -60,7 +63,7 @@ body {
     font-family: var(--fontAleReg);
     font-size: 15px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: var(--textUp);
     letter-spacing: 0.3em;
   }
   & ul {
@@ -74,7 +77,7 @@ body {
 .heading__container,
 .page-footer-bottom-wrap {
   margin: var(--marginCenter);
-  max-width: 1260px;
+  max-width: var(--contWidth);
   width: 100%;
 }
 
@@ -157,7 +160,7 @@ body {
     margin-left: 28px;
 
     &:hover {
-      filter: blur(5px);
+      filter: invert(100%);
     }
     &:nth-of-type(1) {
       margin-left: 0;
@@ -208,10 +211,10 @@ body {
   background: rgba(126, 123, 117, 0.63);
   font-family: var(--fontAleBol);
   padding: 14px 44px;
-  font-weight: bold;
+  font-weight: var(--fontBold);;
   border: 1px dashed var(--borderGrey);
   letter-spacing: 0.3em;
-  text-transform: uppercase;
+  text-transform: var(--textUp);
 
   &:hover {
     opacity: 0.5;
@@ -230,7 +233,7 @@ body {
 
 .art-of-cakes,
 .breakfast {
-  max-width: 630px;
+  max-width: calc(var(--contWidth)/2);
   width: 100%;
   float: left;
 
@@ -241,15 +244,15 @@ body {
   }
   &__under-header {
     font-family: var(--fontAleBol);
-    font-weight: bold;
+    font-weight: var(--fontBold);;
     color: var(--textGold);
-    text-transform: uppercase;
+    text-transform: var(--textUp);
     line-height: 0.625;
     margin-bottom: 60px;
   }
   &__small-text {
     line-height: 1.714;
-    font-weight: bold;
+    font-weight: var(--fontBold);;
     width: 525px;
     margin: var(--marginCenter) 47px;
   }
@@ -261,7 +264,7 @@ body {
     font-size: 24px;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
-    font-weight: bold;
+    font-weight: var(--fontBold);;
     line-height: 1.25;
     letter-spacing: 0.025em;
     margin-bottom: 47px;
@@ -323,7 +326,7 @@ body {
 
 .tastes-good-list {
   float: right;
-  max-width: 630px;
+  max-width: calc(var(--contWidth)/2);
   width: 100%;
   position: relative;
   margin-top: 40px;
@@ -333,25 +336,33 @@ body {
     max-width: 295px;
     width: 100%;
     height: 250px;
+    overflow: hidden;
+    vertical-align: top;
     margin: 9px;
 
     &:hover {
       position: relative;
       z-index: 999;
     }
+    &:last-child {
+      position: absolute;
+      width: 247px;
+      height: 247px;
+      right: 12em;
+      top: 9em;
+      opacity: 0.92;
+      margin: 0;
+
+      .tastes-good-list__img {
+        outline: none;
+      }
+
+    }
   }
-  &__top-item {
-    position: absolute;
-    right: 12em;
-    top: 9em;
-    opacity: 0.92;
-  }
+
   &__img {
     outline: 5px solid var(--white);
     outline-offset: -11px;
-  }
-  &__top-img {
-    outline: none;
   }
 }
 
@@ -417,15 +428,15 @@ body {
   }
   &__under-header {
     font-family: var(--fontAleBol);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     color: var(--textGold);
-    text-transform: uppercase;
+    text-transform: var(--textUp);
     line-height: 0.625;
     margin-bottom: 50px;
   }
   &__small-text {
     line-height: 1.714;
-    font-weight: bold;
+    font-weight: var(--fontBold);
     width: 428px;
   }
 }
@@ -474,7 +485,7 @@ body {
   &__header {
     font-family: var(--fontAleBol);
     font-size: 18px;
-    text-transform: uppercase;
+    text-transform: var(--textUp);
     color: var(--textGold);
     margin-top: 30px;
     margin-bottom: 10px;
@@ -483,7 +494,7 @@ body {
     font-family: var(--fontAleBol);
     font-size: 92px;
     line-height: 0.9;
-    text-transform: uppercase;
+    text-transform: var(--textUp);
     color: var(--gold);
   }
   &__text {
@@ -529,7 +540,7 @@ body {
     font-size: 30px;
     font-family: var(--fontAleBol);
     color: var(--white);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     line-height: 1;
     letter-spacing: 0.05em;
     margin-bottom: 18px;
@@ -554,8 +565,8 @@ body {
   position: relative;
   display: block;
   float: right;
-  width: 440px;
-  height: 600px;
+  width: width('bg.png');
+  height: height('bg.png');
 }
 
 .paper-sheet-bg {
@@ -583,7 +594,7 @@ body {
   &__dash {
     position: absolute;
     width: 420px;
-    height: 579px;
+    height: 580px;
     top: 0;
     margin: 10px;
     background-image:
@@ -619,7 +630,7 @@ body {
   &__est,
   &__year {
     font-family: var(--fontAleBol);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     color: var(--textGrey);
   }
 }
@@ -630,7 +641,7 @@ body {
   &__header {
     font-size: 44px;
     font-family: var(--fontAleBol);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     line-height: 1.364;
     letter-spacing: 0.025em;
     width: 350px;
@@ -666,7 +677,7 @@ body {
     font-size: 48px;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     line-height: 0.625;
     letter-spacing: 0.025em;
     padding-top: 100px;
@@ -678,8 +689,8 @@ body {
   &__under-header {
     font-family: var(--fontAleBol);
     color: var(--textGold);
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: var(--fontBold);
+    text-transform: var(--textUp);
     line-height: 0.625;
   }
 }
@@ -706,7 +717,7 @@ body {
     font-size: 30px;
     font-family: var(--fontAleBol);
     color: var(--textGold);
-    font-weight: bold;
+    font-weight: var(--fontBold);
     line-height: 1;
     letter-spacing: 0.025em;
     margin-bottom: 22px;
@@ -785,8 +796,8 @@ body {
     font-size: 18px;
     font-family: var(--fontAleBol);
     color: var(--textGold);
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: var(--fontBold);
+    text-transform: var(--textUp);
     line-height: 0.667;
     letter-spacing: 0.1em;
   }
@@ -794,15 +805,15 @@ body {
     font-size: 60px;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: var(--fontBold);
+    text-transform: var(--textUp);
     line-height: 1.667;
   }
   &__text {
     font-size: 18px;
     font-family: var(--fontAleBol);
     color: #979285;
-    font-weight: bold;
+    font-weight: var(--fontBold);
     line-height: 1.667;
   }
 }
@@ -853,10 +864,17 @@ body {
   }
   &__link {
     color: var(--textGrey);
-    font-weight: bold;
+    font-weight: var(--fontBold);
 
     &:hover {
       color: red;
     }
   }
+}
+
+/* Media query *//* Media query *//* Media query *//* Media query *//* Media query */
+/* Common media query *//* Common media query *//* Common media query */
+@media (width >= 1200px) and (width <= 1277px) {
+
+
 }
