@@ -33,7 +33,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('default', ['browserSync', 'css'], function() {
-  gulp.watch('src/*.html', browserSync.reload);
+  gulp.watch('./index.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
   gulp.watch('./src/style/*.pcss', ['css'])
 });
