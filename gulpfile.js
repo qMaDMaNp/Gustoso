@@ -2,22 +2,29 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
+const postCSSCustomProperties = require('postcss-custom-properties');
+const cssnext = require('postcss-cssnext');
+const assets = require('postcss-assets');
+const nested = require('postcss-nested');
 const browserSync = require('browser-sync').create();
-const precss = require('precss');
 
 gulp.task('css', function() {
   return gulp.src('./src/style/*.pcss')
     .pipe(postcss([
-      require('postcss-cssnext')({
-        autoprefixer: false
+      postCSSCustomProperties(),
+      nested(),
+      cssnext({
+        autoprefixer: false,
+        features: {
+          customProperties: false
+        }
       }),
-      require('postcss-assets')({
+      assets({
         loadPaths: ['src/img/'],
         relativeTo: 'src/style/'
       }),
-      require('precss')
     ]))
-    .pipe(rename('main.css'))
+    .pipe(rename('mai1n.css'))
     .pipe(gulp.dest('./src/style/'))
     .pipe(browserSync.reload({
       stream: true
@@ -33,7 +40,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('default', ['browserSync', 'css'], function() {
-  gulp.watch('./index.html', browserSync.reload);
+  gulp.watch('src/index.html', browserSync.reload);
   gulp.watch('src/js/**/*.js', browserSync.reload);
-  gulp.watch('./src/style/*.pcss', ['css'])
+  gulp.watch('src/style/*.pcss', ['css'])
 });
