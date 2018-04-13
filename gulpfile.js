@@ -24,7 +24,7 @@ gulp.task('css', function() {
         relativeTo: 'src/style/'
       }),
     ]))
-    .pipe(rename('mai1n.css'))
+    .pipe(rename('main.css'))
     .pipe(gulp.dest('./src/style/'))
     .pipe(browserSync.reload({
       stream: true
