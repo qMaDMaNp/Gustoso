@@ -1234,3 +1234,10 @@ body ul {
     margin: 0 5px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --textGrey: purple;
+    --contWidth: 720px;
+  }
+}
