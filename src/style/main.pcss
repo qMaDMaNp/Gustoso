@@ -1,4 +1,7 @@
 :root {
+  font-size: 16px;
+  line-height: 32px;
+
   --black: #000;
   --white: #fff;
   --gold: #dfc691;
@@ -12,6 +15,9 @@
   --fontProReg: "ProximaRegular", sans-serif;
   --fontBold: bold;
   --contWidth: 1260px;
+
+/* Cake Art */
+  --imgWidth: calc(var(--contWidth) / 4.3014);
 }
 
 @font-face {
@@ -56,12 +62,11 @@ body {
   & p {
     font-family: var(--fontProReg);
     color: var(--textGrey);
-    font-size: 15px;
     letter-spacing: 0.1em;
   }
   & a {
     font-family: var(--fontAleReg);
-    font-size: 15px;
+    font-size: 1rem;
     text-decoration: none;
     text-transform: var(--textUp);
     letter-spacing: 0.3em;
@@ -92,7 +97,7 @@ body {
 }
 
 /* Main styles */
-/* Header *//* Header *//* Header */
+/*Page Header *//*Page Header *//*Page Header */
 .page-header {
   background: resolve("hero.png") no-repeat;
   background-position: 0% 0%;
@@ -102,7 +107,7 @@ body {
   &::after {
     content: resolve('border_bullets.png');
     position: absolute;
-    bottom: -57px;
+    bottom: -64px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -112,7 +117,7 @@ body {
   background: rgba(86, 83, 76, 0.529);
   height: 70px;
   width: 100%;
-  margin-bottom: 225px;
+  margin-bottom: 180px;
 
   &__container {
     display: flex;
@@ -138,7 +143,7 @@ body {
       content: "~";
       color: var(--white);
       font-family: var(--fontAleReg);
-      font-size: 15px;
+      font-size: 1rem;
       text-decoration: none;
       margin: 0 30px;
     }
@@ -182,24 +187,23 @@ body {
     color: var(--white);
   }
   &__big-text {
-    font-size: 92px;
+    font-size: 5.5rem;
     font-family: "PlayfairRegular", sans-serif;
-    line-height: 0.261;
+    line-height: 5.5rem;
     letter-spacing: 0.075em;
     text-shadow: 0px 1px 0px rgba(61, 48, 41, 0.004);
-    margin-bottom: 130px;
+    margin-bottom: 56px;
   }
   &__big-text::after {
     content: resolve('dashed_line.png');
-    position: relative;
-    top: 75px;
   }
   &__small-text {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--white);
     line-height: 1.5;
     text-shadow: 0px 1px 0px rgba(61, 48, 41, 0.004);
-    width: 550px;
+    max-width: 550px;
+    width: 100%;
     margin: var(--marginCenter) 100px;
   }
   &__link {
@@ -210,7 +214,7 @@ body {
 .link-btn {
   background: rgba(126, 123, 117, 0.63);
   font-family: var(--fontAleBol);
-  padding: 14px 44px;
+  padding: 13px 36px;
   font-weight: var(--fontBold);;
   border: 1px dashed var(--borderGrey);
   letter-spacing: 0.3em;
@@ -231,14 +235,13 @@ body {
   padding-bottom: 105px;
 }
 
-.art-of-cakes,
-.breakfast {
+.art-of-cakes {
   max-width: calc(var(--contWidth)/2);
   width: 100%;
   float: left;
 
   &__header {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.625;
     letter-spacing: 0.025em;
   }
@@ -261,7 +264,7 @@ body {
 .chef-cook {
 
   &__chef {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
     font-weight: var(--fontBold);;
@@ -277,7 +280,7 @@ body {
   }
   &__name,
   &__surname {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fontAleBol);
     line-height: 1.25;
     letter-spacing: 0.025em;
@@ -301,19 +304,19 @@ body {
     height: 108px;
   }
   &__left-clip {
-    font-size: 60px;
+    font-size: 4rem;
     height: 32px;
     color: rgba(86, 83, 76, .4);
     align-self: flex-start;
   }
   &__right-clip {
-    font-size: 60px;
+    font-size: 4rem;
     height: 32px;
     color: rgba(86, 83, 76, .4);
     align-self: flex-end;
   }
   &__sign {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: "ScriptinaRegular", sans-serif;
     color: var(--textGold);
     line-height: 1.25;
@@ -333,12 +336,14 @@ body {
 
   &__item {
     display: inline-block;
-    max-width: 295px;
+    max-width: var(--imgWidth);
     width: 100%;
     height: 250px;
     overflow: hidden;
     vertical-align: top;
     margin: 9px;
+    outline: 5px solid var(--white);
+    outline-offset: -11px;
 
     &:hover {
       position: relative;
@@ -348,21 +353,13 @@ body {
       position: absolute;
       width: 247px;
       height: 247px;
-      right: 12em;
-      top: 9em;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
       opacity: 0.92;
       margin: 0;
-
-      .tastes-good-list__img {
-        outline: none;
-      }
-
+      outline: none;
     }
-  }
-
-  &__img {
-    outline: 5px solid var(--white);
-    outline-offset: -11px;
   }
 }
 
@@ -399,7 +396,7 @@ body {
     &__item {
       margin-bottom: 10px;
       color: var(--white);
-      font-size: 20px;
+      font-size: 1.5rem;
     }
   }
 }
@@ -419,10 +416,10 @@ body {
 
   &__text {
     text-align: left;
-    margin-bottom: 90px;
+    margin-bottom: 70px;
   }
   &__header {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.625;
     letter-spacing: 0.025em;
   }
@@ -484,7 +481,7 @@ body {
 
   &__header {
     font-family: var(--fontAleBol);
-    font-size: 18px;
+    font-size: 1.125rem;
     text-transform: var(--textUp);
     color: var(--textGold);
     margin-top: 30px;
@@ -492,14 +489,14 @@ body {
   }
   &__number {
     font-family: var(--fontAleBol);
-    font-size: 92px;
+    font-size: 5.5rem;
     line-height: 0.9;
     text-transform: var(--textUp);
     color: var(--gold);
   }
   &__text {
     font-family: var(--fontAleBol);
-    font-size: 18px;
+    font-size: 1.125rem;
     color: #979285;
   }
 }
@@ -511,20 +508,30 @@ body {
   background-position: 0 50%;
   padding-top: 89px;
   padding-bottom: 89px;
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
+
 .breakfast {
   text-align: center;
-
+  flex-grow: 0.6647;
 
   &__header {
-    font-size: 60px;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
     letter-spacing: 0.05em;
     color: var(--white);
   }
   &__under-header {
-    font-size: 18px;
+    font-weight: bold;
     letter-spacing: 0.05em;
     color: #c8a593;
+    margin-bottom: 48px;
   }
 }
 
@@ -537,7 +544,7 @@ body {
     margin-bottom: 0;
   }
   &__meal {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: var(--fontAleBol);
     color: var(--white);
     font-weight: var(--fontBold);
@@ -546,14 +553,13 @@ body {
     margin-bottom: 18px;
   }
   &__meal-description {
-    font-size: 16px;
     color: #c2beba;
     line-height: 1;
     letter-spacing: 0.05em;
     margin-bottom: 30px;
   }
   &__price {
-    font-size: 36px;
+    font-size: 2rem;
     font-family: "Alegreya";
     color: var(--gold);
     line-height: 0.833;
@@ -564,9 +570,9 @@ body {
 .paper-sheet-wrap {
   position: relative;
   display: block;
-  float: right;
   width: width('bg.png');
   height: height('bg.png');
+  margin-right: 30px;
 }
 
 .paper-sheet-bg {
@@ -639,7 +645,7 @@ body {
   text-align: center;
 
   &__header {
-    font-size: 44px;
+    font-size: 2.5rem;
     font-family: var(--fontAleBol);
     font-weight: var(--fontBold);
     line-height: 1.364;
@@ -674,7 +680,7 @@ body {
   padding-bottom: 70px;
 
   &__header {
-    font-size: 48px;
+    font-size: 3rem;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
     font-weight: var(--fontBold);
@@ -714,7 +720,7 @@ body {
     margin: var(--marginCenter) 22px;
   }
   &__header {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: var(--fontAleBol);
     color: var(--textGold);
     font-weight: var(--fontBold);
@@ -783,7 +789,7 @@ body {
       background-size: cover;
 
       & .ready-in-list__number {
-        font-size: 92px;
+        font-size: 5.5rem;
         line-height: 0.9;
         color: var(--gold);
       }
@@ -793,7 +799,7 @@ body {
     }
   }
   &__header {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: var(--fontAleBol);
     color: var(--textGold);
     font-weight: var(--fontBold);
@@ -802,7 +808,7 @@ body {
     letter-spacing: 0.1em;
   }
   &__number {
-    font-size: 60px;
+    font-size: 4rem;
     font-family: var(--fontAleBol);
     color: var(--textGrey);
     font-weight: var(--fontBold);
@@ -810,7 +816,7 @@ body {
     line-height: 1.667;
   }
   &__text {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-family: var(--fontAleBol);
     color: #979285;
     font-weight: var(--fontBold);
@@ -843,7 +849,7 @@ body {
       content: "~";
       color: var(--black);
       font-family: var(--fontAleReg);
-      font-size: 15px;
+      font-size: 1rem;
       text-decoration: none;
       margin: 0 30px;
     }
@@ -851,7 +857,7 @@ body {
       content: "~";
       color: var(--black);
       font-family: var(--fontAleReg);
-      font-size: 15px;
+      font-size: 1rem;
       text-decoration: none;
       margin: 0 30px;
     }
@@ -874,9 +880,96 @@ body {
 
 /* Media query *//* Media query *//* Media query *//* Media query *//* Media query */
 /* Common media query *//* Common media query *//* Common media query */
-@media (width >= 1200px) and (width <= 1277px) {
-  :root {
-    --textGrey: red;
+@media (width <= 1276px) {
+/*Page Header *//*Page Header *//*Page Header */
+  .heading-logo {
+    margin-left: 5px;
+  }
+  .social-list {
+    margin-right: 5px;
   }
 
+/* Page Footer *//* Page Footer *//* Page Footer */
+/* clears the letter-spacing of a last letter */
+    .bottom-list__link {
+      margin-right: -0.6em;
+    }
+}
+
+/* Main media query *//* Main media query *//* Main media query */
+@media (width >= 1200px) and (width <= 1276px) {
+  :root {
+    --contWidth: 1170px;
+  }
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+  .dishes {
+    margin-left: 47.5px;
+  }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+  .page-footer-right-wrap__img-wrap {
+    width: 780px;
+  }
+}
+
+@media (width >= 992px) and (width < 1200px) {
+  :root {
+    --contWidth: 960px;
+  }
+/* Cake Art */
+.art-of-cakes,
+.tastes-good-list {
+  float: none;
+  margin: 0 auto;
+}
+
+.art-of-cakes {
+  max-width: none;
+  margin-bottom: 80px;
+}
+.tastes-good-list {
+  max-width: calc(var(--contWidth) / 1.5);
+  &__item {
+    max-width: width('flour.png');
+  }
+}
+  /* Page Footer *//* Page Footer *//* Page Footer */
+  .page-footer-list {
+    float: none;
+    margin: 100px auto 100px;
+
+    &__item {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  .page-footer-right-wrap {
+    float: none;
+    margin: 0 auto;
+
+    &__img-wrap {
+      margin: 0 auto;
+    }
+
+    &__link {
+      left: 7px;
+    }
+  }
+
+  .ready-in-list {
+    right: 64px;
+  }
+
+  .bottom-list__item:nth-of-type(n+1):nth-of-type(-n+2)::after {
+    content: "|";
+    color: #000;
+    color: var(--black);
+    font-family: "AlegreyaRegular", sans-serif;
+    font-family: var(--fontAleReg);
+    font-size: 16px;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 5px;
+  }
 }
