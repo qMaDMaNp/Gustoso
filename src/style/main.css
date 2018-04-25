@@ -19,6 +19,10 @@
 /* Cake Art */
   --imgWidth: 292.92788px;
   --imgWidth: calc(var(--contWidth) / 4.3014);
+
+/* Breakfast Section */
+  --paperWidth: 440px;
+  --paperHeight: 600px;
 }
 
 @font-face {
@@ -199,10 +203,6 @@ body ul {
 .social-list__item:nth-of-type(1) {
       margin-left: 0;
     }
-
-.social-list__item:hover {
-    color: black;
-}
 
 .header-content__wrap {
     max-width: 773px;
@@ -723,7 +723,9 @@ body ul {
   position: relative;
   display: block;
   width: 440px;
+  width: var(--paperWidth);
   height: 600px;
+  height: var(--paperHeight);
   margin-right: 30px;
 }
 
@@ -742,7 +744,9 @@ body ul {
 .paper-sheet {
   position: absolute;
   width: 440px;
+  width: var(--paperWidth);
   height: 600px;
+  height: var(--paperHeight);
   background: url('../img/wheat.png'), url('../img/bg.png');
   background-repeat: no-repeat, no-repeat;
   background-position: 281% 120%, 0 0;
@@ -751,7 +755,9 @@ body ul {
 .paper-sheet__dash {
     position: absolute;
     width: 420px;
+    width: calc(var(--paperWidth) / 1.04762);
     height: 580px;
+    height: calc(var(--paperHeight) / 1.03448);
     top: 0;
     margin: 10px;
     background-image:
@@ -1175,7 +1181,7 @@ body ul {
   :root {
     --contWidth: 960px;
   }
-/* Cake Art */
+/* Cake Art *//* Cake Art *//* Cake Art */
 .art-of-cakes,
 .tastes-good-list {
   float: none;
@@ -1186,6 +1192,7 @@ body ul {
   max-width: none;
   margin-bottom: 80px;
 }
+
 .tastes-good-list {
   max-width: 840px;
   max-width: calc(var(--contWidth) / 1.5);
@@ -1193,7 +1200,7 @@ body ul {
   .tastes-good-list__item {
     max-width: 295px;
   }
-  /* Page Footer *//* Page Footer *//* Page Footer */
+/* Page Footer *//* Page Footer *//* Page Footer */
   .page-footer-list {
     float: none;
     margin: 100px auto 100px;
@@ -1237,7 +1244,384 @@ body ul {
 
 @media (min-width: 768px) and (max-width: 991px) {
   :root {
-    --textGrey: purple;
     --contWidth: 720px;
   }
+/* Page Header *//* Page Header *//* Page Header */
+  .header-content__big-text {
+    width: 417px;
+    margin: 0 auto 56px;
+  }
+
+/* Cake Art *//* Cake Art *//* Cake Art */
+  .art-of-cakes,
+  .tastes-good-list {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .art-of-cakes {
+    max-width: none;
+    margin-bottom: 80px;
+  }
+
+  .tastes-good-list {
+    max-width: 1260px;
+    max-width: var(--contWidth);
+  }
+    .tastes-good-list__item {
+      max-width: 295px;
+    }
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+  .breakfast {
+    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    margin: 0 auto 88px;
+  }
+
+  .paper-sheet-wrap {
+    margin: 0 auto;
+  }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+  .page-footer-list {
+    float: none;
+    margin: 50px auto;
+  }
+
+    .page-footer-list__item {
+      display: inline-block;
+      margin: 0;
+    }
+
+      .page-footer-list__item:last-child {
+        margin-top: 30px;
+      }
+
+  .page-footer-list__item {
+    width: 235px;
+  }
+
+  .page-footer-right-wrap {
+    float: none;
+  }
+
+    .page-footer-right-wrap__img-wrap {
+      width: 700px;
+    }
+
+  .bottom-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+    .bottom-list__item {
+      width: 160px;
+    }
+
+      .bottom-list__item:nth-of-type(n+1):nth-of-type(-n+2)::after {
+        content: none;
+      }
+
+    .bottom-list__item:first-child {
+      padding-left: 0;
+      border-bottom: 0px solid rgba(86, 83, 76, .4);
+    }
+
+    .bottom-list__item:last-child {
+      padding-right: 0;
+      border-top: 0px solid rgba(86, 83, 76, .4);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  :root {
+    --contWidth: 540px;
+  }
+/* Page Header *//* Page Header *//* Page Header */
+    .header-content__big-text {
+      width: 417px;
+      margin: 0 auto 56px;
+    }
+    .page-header::after {
+      bottom: -79px;
+    }
+/* Cake Art *//* Cake Art *//* Cake Art */
+    .art-of-cakes,
+    .tastes-good-list {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .art-of-cakes {
+      max-width: none;
+      margin-bottom: 80px;
+    }
+
+    .tastes-good-list {
+      max-width: 1260px;
+      max-width: var(--contWidth);
+    }
+      .tastes-good-list__item {
+        max-width: 250px;
+      }
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+    .breakfast {
+      text-align: center;
+      -webkit-box-flex: 0;
+          -ms-flex-positive: 0;
+              flex-grow: 0;
+      margin: 0 auto 88px;
+    }
+
+    .paper-sheet-wrap {
+      margin: 0 auto;
+    }
+
+  /* Page Footer *//* Page Footer *//* Page Footer */
+    .page-footer-list {
+      float: none;
+      margin: 50px auto;
+    }
+
+      .page-footer-list__item {
+        display: inline-block;
+        margin: 0;
+      }
+
+        .page-footer-list__item:last-child {
+          margin-top: 30px;
+        }
+
+    .page-footer-list__item {
+      width: 235px;
+    }
+
+    .page-footer-right-wrap {
+      float: none;
+    }
+
+      .page-footer-right-wrap__img-wrap {
+        width: 520px;
+        height: 470px;
+      }
+
+    .bottom-list {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+      .bottom-list__item {
+        width: 160px;
+      }
+
+        .bottom-list__item:nth-of-type(n+1):nth-of-type(-n+2)::after {
+          content: none;
+        }
+
+      .bottom-list__item:first-child {
+        padding-left: 0;
+        border-bottom: 0px solid rgba(86, 83, 76, .4);
+      }
+
+      .bottom-list__item:last-child {
+        padding-right: 0;
+        border-top: 0px solid rgba(86, 83, 76, .4);
+      }
+
+    .ready-in-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      top: -22px;
+      right: 8.5px;
+      width: 523px;
+    }
+
+        .ready-in-list__item:nth-of-type(3) .ready-in-list__number {
+          line-height: 0.8;
+        }
+
+      .ready-in-list__number {
+        line-height: 1.267;
+
+      }
+
+      .ready-in-list__item:nth-of-type(1),
+      .ready-in-list__item:nth-of-type(2) {
+        margin-bottom: 0;
+        margin-top: 2px;
+        height: 150px;
+      }
+
+      .ready-in-list__item:nth-of-type(2) {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      .ready-in-list__item:nth-of-type(3) {
+        height: 153px;
+      }
+
+    .page-footer-right-wrap__link {
+      left: -6px;
+    }
+}
+
+@media (max-width: 575px) {
+  :root {
+    --contWidth: auto;
+    --sidePadding: 10px;
+    --paperWidth: 380px;
+    --paperHeight: 540px;
+  }
+
+  /* Page Header *//* Page Header *//* Page Header */
+      .heading {
+        margin-bottom: 100px;
+      }
+
+      .header-content__big-text {
+        width: 90%;
+        margin: 0 auto 56px;
+      }
+
+      .page-header::after {
+        bottom: -79px;
+      }
+  /* Cake Art *//* Cake Art *//* Cake Art */
+      .cake-art-section {
+        padding-left: var(--sidePadding);
+        padding-left: var(--sidePadding);
+        padding-right: var(--sidePadding);
+        padding-right: var(--sidePadding);
+        padding-bottom: 0;
+      }
+
+      .art-of-cakes,
+      .tastes-good-list {
+        float: none;
+        margin: 0 auto;
+      }
+
+      .art-of-cakes {
+        max-width: none;
+        margin-bottom: 80px;
+      }
+
+        .art-of-cakes__small-text {
+          width: auto;
+        }
+
+        .chef-cook__text-wrap {
+          width: 1260px;
+          width: var(--contWidth);
+        }
+
+        .chef-cook__left-clip,
+        .chef-cook__right-clip {
+          line-height: 1;
+        }
+
+      .tastes-good-list {
+        display: none;
+        max-width: 1260px;
+        max-width: var(--contWidth);
+      }
+        .tastes-good-list__item {
+          max-width: 250px;
+        }
+
+  /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+      .breakfast-section {
+        padding-left: var(--sidePadding);
+        padding-left: var(--sidePadding);
+        padding-right: var(--sidePadding);
+        padding-right: var(--sidePadding);
+      }
+
+      .breakfast {
+        text-align: center;
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        margin: 0 auto 88px;
+      }
+
+      .paper-sheet-wrap {
+        margin: 0 auto;
+      }
+
+      .paper-sheet-bg {
+        display: none;
+      }
+
+      .paper-sheet {
+        background-position: 646% 124%, 0 100%;
+      }
+
+        .paper-sheet__corner {
+          bottom: 0px;
+          left: 0px;
+        }
+
+      .paper-sheet-top {
+        background-size: 93% auto, auto auto;
+        height: 88px;
+      }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+        .page-footer {
+          padding-left: var(--sidePadding);
+          padding-left: var(--sidePadding);
+          padding-right: var(--sidePadding);
+          padding-right: var(--sidePadding);
+        }
+
+        .page-footer-list {
+          float: none;
+          margin: 50px auto;
+        }
+
+          .page-footer-list__item {
+            display: inline-block;
+            margin: 0;
+          }
+
+            .page-footer-list__item:nth-of-type(2) {
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+
+        .page-footer-list__item {
+          width: 80%;
+        }
+
+        .page-footer-bottom-wrap {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+        }
+
+            .bottom-list__item:first-child {
+              padding-left: 10px;
+            }
+
+            .bottom-list__item:last-child {
+              padding-right: 10px;
+            }
+
+            .bottom-list__item:nth-of-type(n+1):nth-of-type(-n+2)::after {
+              content: "|";
+              margin: 0 10px;
+            }
+
 }

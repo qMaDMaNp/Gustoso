@@ -18,6 +18,10 @@
 
 /* Cake Art */
   --imgWidth: calc(var(--contWidth) / 4.3014);
+
+/* Breakfast Section */
+  --paperWidth: 440px;
+  --paperHeight: 600px;
 }
 
 @font-face {
@@ -171,10 +175,6 @@ body {
       margin-left: 0;
     }
   }
-}
-
-.social-list__item:hover {
-    color: black;
 }
 
 .header-content {
@@ -570,8 +570,8 @@ body {
 .paper-sheet-wrap {
   position: relative;
   display: block;
-  width: width('bg.png');
-  height: height('bg.png');
+  width: var(--paperWidth);
+  height: var(--paperHeight);
   margin-right: 30px;
 }
 
@@ -591,16 +591,16 @@ body {
 
 .paper-sheet {
   position: absolute;
-  width: 440px;
-  height: 600px;
+  width: var(--paperWidth);
+  height: var(--paperHeight);
   background: resolve("wheat.png"), resolve("bg.png");
   background-repeat: no-repeat, no-repeat;
   background-position: 281% 120%, 0 0;
 
   &__dash {
     position: absolute;
-    width: 420px;
-    height: 580px;
+    width: calc(var(--paperWidth) / 1.04761904);
+    height: calc(var(--paperHeight) / 1.03448275);
     top: 0;
     margin: 10px;
     background-image:
@@ -917,7 +917,7 @@ body {
   :root {
     --contWidth: 960px;
   }
-/* Cake Art */
+/* Cake Art *//* Cake Art *//* Cake Art */
 .art-of-cakes,
 .tastes-good-list {
   float: none;
@@ -928,13 +928,14 @@ body {
   max-width: none;
   margin-bottom: 80px;
 }
+
 .tastes-good-list {
   max-width: calc(var(--contWidth) / 1.5);
   &__item {
     max-width: width('flour.png');
   }
 }
-  /* Page Footer *//* Page Footer *//* Page Footer */
+/* Page Footer *//* Page Footer *//* Page Footer */
   .page-footer-list {
     float: none;
     margin: 100px auto 100px;
@@ -976,7 +977,369 @@ body {
 
 @media (width >= 768px) and (width < 992px) {
   :root {
-    --textGrey: purple;
     --contWidth: 720px;
   }
+/* Page Header *//* Page Header *//* Page Header */
+  .header-content__big-text {
+    width: 417px;
+    margin: 0 auto 56px;
+  }
+
+/* Cake Art *//* Cake Art *//* Cake Art */
+  .art-of-cakes,
+  .tastes-good-list {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .art-of-cakes {
+    max-width: none;
+    margin-bottom: 80px;
+  }
+
+  .tastes-good-list {
+    max-width: var(--contWidth);
+    &__item {
+      max-width: width('flour.png');
+    }
+  }
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+  .breakfast {
+    text-align: center;
+    flex-grow: 0;
+    margin: 0 auto 88px;
+  }
+
+  .paper-sheet-wrap {
+    margin: 0 auto;
+  }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+  .page-footer-list {
+    float: none;
+    margin: 50px auto;
+
+    &__item {
+      display: inline-block;
+      margin: 0;
+
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .page-footer-list__item {
+    width: 235px;
+  }
+
+  .page-footer-right-wrap {
+    float: none;
+
+    &__img-wrap {
+      width: 700px;
+    }
+  }
+
+  .bottom-list {
+    flex-direction: column;
+
+    &__item {
+      width: 160px;
+
+      &:nth-of-type(n+1):nth-of-type(-n+2)::after {
+        content: none;
+      }
+    }
+
+    &__item:first-child {
+      padding-left: 0;
+      border-bottom: 0px solid rgba(86, 83, 76, .4);
+    }
+
+    &__item:last-child {
+      padding-right: 0;
+      border-top: 0px solid rgba(86, 83, 76, .4);
+    }
+  }
+}
+
+@media (width >= 576px) and (width < 768px) {
+  :root {
+    --contWidth: 540px;
+  }
+/* Page Header *//* Page Header *//* Page Header */
+    .header-content__big-text {
+      width: 417px;
+      margin: 0 auto 56px;
+    }
+    .page-header::after {
+      bottom: -79px;
+    }
+/* Cake Art *//* Cake Art *//* Cake Art */
+    .art-of-cakes,
+    .tastes-good-list {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .art-of-cakes {
+      max-width: none;
+      margin-bottom: 80px;
+    }
+
+    .tastes-good-list {
+      max-width: var(--contWidth);
+      &__item {
+        max-width: 250px;
+      }
+    }
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+    .breakfast {
+      text-align: center;
+      flex-grow: 0;
+      margin: 0 auto 88px;
+    }
+
+    .paper-sheet-wrap {
+      margin: 0 auto;
+    }
+
+  /* Page Footer *//* Page Footer *//* Page Footer */
+    .page-footer-list {
+      float: none;
+      margin: 50px auto;
+
+      &__item {
+        display: inline-block;
+        margin: 0;
+
+        &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .page-footer-list__item {
+      width: 235px;
+    }
+
+    .page-footer-right-wrap {
+      float: none;
+
+      &__img-wrap {
+        width: 520px;
+        height: 470px;
+      }
+    }
+
+    .bottom-list {
+      flex-direction: column;
+
+      &__item {
+        width: 160px;
+
+        &:nth-of-type(n+1):nth-of-type(-n+2)::after {
+          content: none;
+        }
+      }
+
+      &__item:first-child {
+        padding-left: 0;
+        border-bottom: 0px solid rgba(86, 83, 76, .4);
+      }
+
+      &__item:last-child {
+        padding-right: 0;
+        border-top: 0px solid rgba(86, 83, 76, .4);
+      }
+    }
+
+    .ready-in-list {
+      display: flex;
+      top: -22px;
+      right: 8.5px;
+      width: 523px;
+
+      &__item {
+
+        &:nth-of-type(3) .ready-in-list__number {
+          line-height: 0.8;
+        }
+      }
+
+      &__number {
+        line-height: 1.267;
+
+      }
+
+      &__item:nth-of-type(1),
+      &__item:nth-of-type(2) {
+        margin-bottom: 0;
+        margin-top: 2px;
+        height: 150px;
+      }
+
+      &__item:nth-of-type(2) {
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+
+      &__item:nth-of-type(3) {
+        height: 153px;
+      }
+    }
+
+    .page-footer-right-wrap__link {
+      left: -6px;
+    }
+}
+
+@media (width < 576px) {
+  :root {
+    --contWidth: auto;
+    --sidePadding: 10px;
+    --paperWidth: 380px;
+    --paperHeight: 540px;
+  }
+
+  /* Page Header *//* Page Header *//* Page Header */
+      .heading {
+        margin-bottom: 100px;
+      }
+
+      .header-content__big-text {
+        width: 90%;
+        margin: 0 auto 56px;
+      }
+
+      .page-header::after {
+        bottom: -79px;
+      }
+  /* Cake Art *//* Cake Art *//* Cake Art */
+      .cake-art-section {
+        padding-left: var(--sidePadding);
+        padding-right: var(--sidePadding);
+        padding-bottom: 0;
+      }
+
+      .art-of-cakes,
+      .tastes-good-list {
+        float: none;
+        margin: 0 auto;
+      }
+
+      .art-of-cakes {
+        max-width: none;
+        margin-bottom: 80px;
+
+        &__small-text {
+          width: auto;
+        }
+      }
+
+      .chef-cook {
+
+        &__text-wrap {
+          width: var(--contWidth);
+        }
+
+        &__left-clip,
+        &__right-clip {
+          line-height: 1;
+        }
+      }
+
+      .tastes-good-list {
+        display: none;
+        max-width: var(--contWidth);
+        &__item {
+          max-width: 250px;
+        }
+      }
+
+  /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+      .breakfast-section {
+        padding-left: var(--sidePadding);
+        padding-right: var(--sidePadding);
+      }
+
+      .breakfast {
+        text-align: center;
+        flex-grow: 0;
+        margin: 0 auto 88px;
+      }
+
+      .paper-sheet-wrap {
+        margin: 0 auto;
+      }
+
+      .paper-sheet-bg {
+        display: none;
+      }
+
+      .paper-sheet {
+        background-position: 646% 124%, 0 100%;
+
+        &__corner {
+          bottom: 0px;
+          left: 0px;
+        }
+      }
+
+      .paper-sheet-top {
+        background-size: 93% auto, auto auto;
+        height: 88px;
+      }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+        .page-footer {
+          padding-left: var(--sidePadding);
+          padding-right: var(--sidePadding);
+        }
+
+        .page-footer-list {
+          float: none;
+          margin: 50px auto;
+
+          &__item {
+            display: inline-block;
+            margin: 0;
+
+            &:nth-of-type(2) {
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+          }
+        }
+
+        .page-footer-list__item {
+          width: 80%;
+        }
+
+        .page-footer-bottom-wrap {
+          flex-direction: column;
+        }
+
+        .bottom-list {
+
+          &__item {
+
+            &:first-child {
+              padding-left: 10px;
+            }
+
+            &:last-child {
+              padding-right: 10px;
+            }
+
+            &:nth-of-type(n+1):nth-of-type(-n+2)::after {
+              content: "|";
+              margin: 0 10px;
+            }
+          }
+        }
+
 }
