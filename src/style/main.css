@@ -130,7 +130,6 @@ body ul {
   background: rgba(86, 83, 76, .529);
   height: 70px;
   width: 100%;
-  margin-bottom: 180px;
 }
 
 .heading__container {
@@ -205,10 +204,13 @@ body ul {
     }
 
 .header-content__wrap {
-    max-width: 773px;
+    position: absolute;
     width: 100%;
-    margin: 0 auto;
-    margin: var(--marginCenter);
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 773px;
     text-align: center;
     color: #fff;
     color: var(--white);
