@@ -50,6 +50,7 @@
 }
 
 /* Common styles *//* Common styles *//* Common styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -100,6 +101,9 @@ body {
   overflow: hidden;
 }
 
+*:focus {
+    outline: none;
+}
 /* Main styles */
 /*Page Header *//*Page Header *//*Page Header */
 .page-header {
@@ -351,6 +355,7 @@ body {
       position: relative;
       z-index: 999;
     }
+
     &:last-child {
       position: absolute;
       width: 247px;
@@ -377,21 +382,23 @@ body {
 .dishes {
   display: flex;
   width: 965px;
-  margin-left: 95px;
+  margin: 0 auto;
 }
 
 .dishes-left-wrap {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: resolve("pancakes.png") no-repeat;
-  background-size: cover;
   max-width: 420px;
   width: 100%;
   height: 513px;
   box-shadow: 0px 13px 123px -5px rgba(125,125,125,1);
   border-bottom-left-radius: 74px;
+  overflow: hidden;
 
+  &__img {
+
+  }
   & .stars-list {
     margin-left: 25px;
 
@@ -452,6 +459,9 @@ body {
     width: 32px;
     height: 32px;
   }
+  &__btn-svg:hover {
+    fill: #d8bba3;
+  }
 }
 
 .dishes-slider-list {
@@ -468,6 +478,11 @@ body {
     height: 93px;
     overflow: hidden;
     border-radius: 100%;
+
+    transition: transform 0.3s ease;
+  }
+  &__img:hover {
+    transform:scale(1.1);
   }
 }
 
@@ -487,7 +502,6 @@ body {
     text-transform: var(--textUp);
     color: var(--textGold);
     margin-top: 30px;
-    margin-bottom: 10px;
   }
   &__number {
     font-family: var(--fontAleBol);
@@ -954,7 +968,6 @@ body {
     &__img-wrap {
       margin: 0 auto;
     }
-
     &__link {
       left: 7px;
     }
@@ -1059,7 +1072,6 @@ body {
       padding-left: 0;
       border-bottom: 0px solid rgba(86, 83, 76, .4);
     }
-
     &__item:last-child {
       padding-right: 0;
       border-top: 0px solid rgba(86, 83, 76, .4);
@@ -1149,24 +1161,20 @@ body {
           line-height: 0.8;
         }
       }
-
       &__number {
         line-height: 1.267;
 
       }
-
       &__item:nth-of-type(1),
       &__item:nth-of-type(2) {
         margin-bottom: 0;
         margin-top: 2px;
         height: 150px;
       }
-
       &__item:nth-of-type(2) {
         margin-left: 2px;
         margin-right: 2px;
       }
-
       &__item:nth-of-type(3) {
         height: 153px;
       }
@@ -1186,12 +1194,10 @@ body {
           content: none;
         }
       }
-
       &__item:first-child {
         padding-left: 0;
         border-bottom: 0px solid rgba(86, 83, 76, .4);
       }
-
       &__item:last-child {
         padding-right: 0;
         border-top: 0px solid rgba(86, 83, 76, .4);
@@ -1310,16 +1316,13 @@ body {
           &__item {
             display: inline-block;
             margin: 0;
+            width: 80%;
 
             &:nth-of-type(2) {
               margin-top: 30px;
               margin-bottom: 30px;
             }
           }
-        }
-
-        .page-footer-list__item {
-          width: 80%;
         }
 
         .page-footer-bottom-wrap {
@@ -1334,7 +1337,6 @@ body {
             border-width: 5px;
             height: 400px;
           }
-
           &__img {
             position: relative;
             left: -300px;
@@ -1353,7 +1355,6 @@ body {
             &:nth-of-type(3) .ready-in-list__header {
               margin-bottom: 0;
             }
-
             &:nth-of-type(3) .ready-in-list__number {
               line-height: 0.8;
               font-size: 4rem;
@@ -1365,24 +1366,20 @@ body {
             font-size: 1rem;
              margin-bottom: 0;
           }
-
           &__number {
             line-height: 1;
             font-size: 3rem;
           }
-
           &__item:nth-of-type(1),
           &__item:nth-of-type(2) {
             margin-bottom: 0;
             margin-top: 2px;
             height: 98px;
           }
-
           &__item:nth-of-type(2) {
             margin-left: 2px;
             margin-right: 2px;
           }
-
           &__item:nth-of-type(3) {
             height: 102px;
           }
@@ -1404,7 +1401,6 @@ body {
           &__img {
             margin: 20px auto;
           }
-
           &__item {
             border: 0;
             padding: 10px 0;
@@ -1412,16 +1408,13 @@ body {
             &:first-child {
               padding-left: 0;
             }
-
             &:last-child {
               padding-right: 0;
             }
-
             &:nth-of-type(n+1):nth-of-type(-n+2)::after {
               content: none;
             }
           }
-
           &:nth-of-type(2) {
             .bottom-list__item:nth-of-type(1) {
               order: 3;
