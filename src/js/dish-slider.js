@@ -3,6 +3,7 @@ const dishesLeftWrapElem = document.querySelector(".dishes-left-wrap");
 const dishesSliderBigImgElem = document.querySelector(".dishes-left-wrap__img");
 const leftArrowElem = document.querySelector(".dishes-slider__btn-left");
 const rightArrowElem = document.querySelector(".dishes-slider__btn-right");
+let windowWidth = window.matchMedia("(max-width: 1199px)");
 let valueCounter = '3';
 
 dishesSliderListElem.addEventListener('click', listItemClicked, false);
@@ -59,14 +60,29 @@ function animateSlider(target) {
   valueCounter = target;
   //clear previous state
   dishesLeftWrapElem.classList.remove('animation');
+  dishesLeftWrapElem.classList.remove('animation-top');
   dishesLeftWrapElem.classList.remove('animation-reverse');
-  //start event
-  dishesLeftWrapElem.classList.add('animation');
-  //check if transition ended
-  dishesLeftWrapElem.addEventListener("transitionend", function() {
-    //change img
-    dishesSliderBigImgElem.src = 'img/big_img' + target + '.png';
-    //start event reverse
-    dishesLeftWrapElem.classList.add('animation-reverse');
-  });
+  dishesLeftWrapElem.classList.remove('animation-reverse-top');
+  //check innerWidth size
+  if (windowWidth.matches) {
+    //start event
+    dishesLeftWrapElem.classList.add('animation-top');
+    //check if transition ended
+    dishesLeftWrapElem.addEventListener("transitionend", function() {
+      //change img
+      dishesSliderBigImgElem.src = 'img/big_img' + target + '.png';
+      //start event reverse
+      dishesLeftWrapElem.classList.add('animation-reverse-top');
+    });
+  } else {
+    //start event
+    dishesLeftWrapElem.classList.add('animation');
+    //check if transition ended
+    dishesLeftWrapElem.addEventListener("transitionend", function() {
+      //change img
+      dishesSliderBigImgElem.src = 'img/big_img' + target + '.png';
+      //start event reverse
+      dishesLeftWrapElem.classList.add('animation-reverse');
+    });
+  };
 }

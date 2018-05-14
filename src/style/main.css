@@ -153,6 +153,26 @@ body ul {
             align-items: center;
   }
 
+.heading-hamburger {
+  display: none;
+}
+
+.heading-hamburger__stripe {
+    width: 28px;
+    height: 3px;
+    margin: 5px 0;
+    background: #fff;
+    background: var(--white);
+  }
+
+.heading-hamburger:hover ~ .navigation {
+    display: block;
+    position: absolute;
+    top: 70px;
+    background: rgba(86, 83, 76, .529);
+    z-index: 100;
+  }
+
 .heading-logo {
   margin-top: 15px;
 }
@@ -476,6 +496,7 @@ body ul {
 .dishes-left-wrap {
   position: relative;
   left: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -520,6 +541,18 @@ body ul {
   -webkit-transition: 1s;
   transition: 1s;
   left: 0px;
+}
+
+.animation-top {
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: -430px;
+}
+
+.animation-reverse-top {
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: 0px;
 }
 
 .dishes-right-wrap {
@@ -1168,11 +1201,11 @@ body ul {
     }
 
 .bottom-list__item:first-child {
-      padding-left: 45px;
+      padding-left: 35px;
     }
 
 .bottom-list__item:last-child {
-      padding-right: 45px;
+      padding-right: 35px;
     }
 
 .bottom-list__link {
@@ -1225,6 +1258,26 @@ body ul {
   :root {
     --contWidth: 960px;
   }
+/* Page Header *//* Page Header *//* Page Header */
+.navigation {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+  .navigation-list__item {
+    margin: 0;
+  }
+
+    .navigation-list__item:nth-of-type(-n+4)::after {
+      content: "|";
+      margin: 0 15px;
+    }
+
+  .navigation-list__link {
+    margin-right: -0.6em;
+  }
+
 /* Cake Art *//* Cake Art *//* Cake Art */
 .art-of-cakes,
 .tastes-good-list {
@@ -1244,6 +1297,62 @@ body ul {
   .tastes-good-list__item {
     max-width: 295px;
   }
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+.dishes {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dishes-left-wrap {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  max-width: 840px;
+  max-width: calc(var(--contWidth) / 1.5);
+  height: 351px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+  .dishes-left-wrap__img {
+    position: relative;
+    top: 0;
+  }
+
+.dishes-right-wrap {
+
+  width: 840px;
+
+  width: calc(var(--contWidth) / 1.5);
+  max-width: none;
+  height: 410px;
+}
+
+  .dishes-right-wrap__text {
+    margin-bottom: 35px;
+  }
+
+.ready-in {
+  width: 180px;
+  height: 180px;
+  top: -4%;
+  right: -4%;
+  background-position: center;
+}
+
+  .ready-in__header {
+    margin-top: 13px;
+  }
+  .ready-in__number {
+    font-size: 4.5rem;
+  }
+
 /* Page Footer *//* Page Footer *//* Page Footer */
   .page-footer-list {
     float: none;
@@ -1281,7 +1390,7 @@ body ul {
     font-size: 16px;
     font-size: 1rem;
     text-decoration: none;
-    margin: 0 5px;
+    margin: 0 8px;
   }
 }
 
@@ -1289,11 +1398,51 @@ body ul {
   :root {
     --contWidth: 720px;
   }
+
 /* Page Header *//* Page Header *//* Page Header */
-  .header-content__big-text {
-    width: 417px;
-    margin: 0 auto 56px;
-  }
+.heading-hamburger {
+  display: block;
+  margin-left: 5px;
+  margin-right: 66px;
+}
+
+.heading-logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.navigation {
+  display: none;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.navigation-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+    .navigation-list__item:nth-of-type(-n+4)::after {
+      content: none;
+    }
+
+.social-list {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.header-content__big-text {
+  width: 417px;
+  margin: 0 auto 56px;
+}
 
 /* Cake Art *//* Cake Art *//* Cake Art */
   .art-of-cakes,
@@ -1314,6 +1463,67 @@ body ul {
     .tastes-good-list__item {
       max-width: 295px;
     }
+
+.page-header::after {
+  bottom: -63px;
+}
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+.dishes {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dishes-left-wrap {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  max-width: 840px;
+  max-width: calc(var(--contWidth) / 1.5);
+  height: 280px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+  .dishes-left-wrap__img {
+    position: relative;
+    top: 0;
+    left: -80px;
+    -webkit-transform: scale(0.75, 0.75);
+            transform: scale(0.75, 0.75);
+  }
+
+.dishes-right-wrap {
+  width: 840px;
+  width: calc(var(--contWidth) / 1.5);
+  max-width: none;
+  height: 410px;
+  padding-top: 20px;
+}
+
+  .dishes-right-wrap__text {
+    margin-bottom: 35px;
+  }
+
+.ready-in {
+  width: 130px;
+  height: 130px;
+  top: -4%;
+  right: -4%;
+  background-position: center;
+}
+
+  .ready-in__header {
+    margin-top: 6px;
+  }
+  .ready-in__number {
+    font-size: 4rem;
+  }
 
 /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
   .breakfast {
@@ -1385,6 +1595,46 @@ body ul {
     --contWidth: 540px;
   }
 /* Page Header *//* Page Header *//* Page Header */
+
+.heading-hamburger {
+  display: block;
+  margin-left: 5px;
+  margin-right: 66px;
+}
+
+.heading-logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.navigation {
+  display: none;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.navigation-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+    .navigation-list__item:nth-of-type(-n+4)::after {
+      content: none;
+    }
+
+.social-list {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
     .header-content__big-text {
       width: 417px;
       margin: 0 auto 56px;
@@ -1410,6 +1660,63 @@ body ul {
     }
       .tastes-good-list__item {
         max-width: 250px;
+      }
+
+    /* Dishes Section *//* Dishes Section *//* Dishes Section */
+    .dishes {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+
+    .dishes-left-wrap {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      max-width: 1260px;
+      max-width: var(--contWidth);
+      height: 280px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+      .dishes-left-wrap__img {
+        position: relative;
+        top: 0;
+        left: -9%;
+        -webkit-transform: scale(0.86, 0.86);
+                transform: scale(0.86, 0.86);
+      }
+
+    .dishes-right-wrap {
+      width: 1260px;
+      width: var(--contWidth);
+      max-width: none;
+      height: 410px;
+      padding-top: 20px;
+    }
+
+      .dishes-right-wrap__text {
+        margin-bottom: 35px;
+      }
+
+    .ready-in {
+      width: 130px;
+      height: 130px;
+      top: -1%;
+      right: -1%;
+      background-position: center;
+    }
+
+      .ready-in__header {
+        margin-top: 6px;
+      }
+      .ready-in__number {
+        font-size: 4rem;
       }
 
 /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
