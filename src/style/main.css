@@ -1640,7 +1640,7 @@ body ul {
       margin: 0 auto 56px;
     }
     .page-header::after {
-      bottom: -79px;
+      bottom: -62px;
     }
 /* Cake Art *//* Cake Art *//* Cake Art */
     .art-of-cakes,
@@ -1820,9 +1820,9 @@ body ul {
 
 @media (max-width: 575px) {
   :root {
-    --contWidth: auto;
+    --contWidth: 100%;
     --sidePadding: 10px;
-    --paperWidth: 380px;
+    --paperWidth: 320px;
     --paperHeight: 540px;
   }
 
@@ -1831,13 +1831,69 @@ body ul {
         margin-bottom: 100px;
       }
 
+      .heading-hamburger {
+        display: block;
+        margin-left: 5px;
+        margin-right: 0;
+      }
+
+        .heading-hamburger:hover ~ .social-list {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+        }
+
+      .heading-logo {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        margin-left: 0;
+        margin-right: 5px;
+      }
+
+      .navigation {
+        display: none;
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+      }
+
+      .navigation-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+
+          .navigation-list__item:nth-of-type(-n+4)::after {
+            content: none;
+          }
+
+      .social-list {
+        display: none;
+        position: absolute;
+        top: 225px;
+        z-index: 100;
+        background: rgba(86, 83, 76, .529);
+        width: 169px;
+      }
+
       .header-content__big-text {
-        width: 90%;
-        margin: 0 auto 56px;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+        width: 300px;
+        margin: 0 auto 32px;
+      }
+
+      .header-content__small-text {
+        margin-bottom: 86px;
       }
 
       .page-header::after {
-        bottom: -79px;
+        bottom: -62px;
       }
   /* Cake Art *//* Cake Art *//* Cake Art */
       .cake-art-section {
@@ -1859,15 +1915,27 @@ body ul {
         margin-bottom: 80px;
       }
 
+        .art-of-cakes__header,
+        .art-of-cakes__under-header {
+          line-height: 1;
+        }
         .art-of-cakes__small-text {
           width: auto;
         }
 
+        .chef-cook__wrap {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+        }
+        .chef-cook__img-wrap {
+          margin: 8px 0;
+        }
         .chef-cook__text-wrap {
           width: 1260px;
           width: var(--contWidth);
         }
-
         .chef-cook__left-clip,
         .chef-cook__right-clip {
           line-height: 1;
@@ -1881,6 +1949,88 @@ body ul {
 
         .tastes-good-list__item {
           max-width: 250px;
+        }
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+      .dishes {
+        width: 320px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+
+      .dishes-left-wrap {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        max-width: 320px;
+        height: 280px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+      }
+
+        .dishes-left-wrap__img {
+          position: relative;
+          top: 0;
+          left: -50%;
+          -webkit-transform: scale(0.66, 0.66);
+                  transform: scale(0.66, 0.66);
+        }
+
+      .dishes-right-wrap {
+        width: 320px;
+        max-width: none;
+        height: 410px;
+        padding-top: 20px;
+      }
+
+        .dishes-right-wrap__text {
+          margin-bottom: 25px;
+          padding-left: 10px;
+        }
+        .dishes-right-wrap__header {
+          line-height: 1;
+        }
+        .dishes-right-wrap__under-header {
+          line-height: 3;
+          margin-bottom: 0;
+        }
+        .dishes-right-wrap__small-text {
+          width: 310px;
+        }
+
+      .dishes-slider {
+        width: 320px;
+      }
+
+        .dishes-slider__btn-left,
+        .dishes-slider__btn-right {
+          display: none;
+        }
+
+        .dishes-slider-list__item {
+          margin: 0 6px;
+        }
+        .dishes-slider-list__img-wrap {
+
+        }
+
+      .ready-in {
+        width: 110px;
+        height: 110px;
+        top: -1%;
+        right: -1%;
+        background-position: center;
+      }
+
+        .ready-in__header {
+          margin-top: 8px;
+          font-size: 1rem;
+        }
+        .ready-in__number {
+          font-size: 3rem;
+          line-height: 0.8;
         }
 
   /* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
@@ -1904,8 +2054,21 @@ body ul {
       }
 
       .paper-sheet-bg {
-        display: none;
+        display: block;
       }
+
+        .paper-sheet-bg__second {
+          position: absolute;
+          right: 9px;
+          width: 341px;
+          height: 460px;
+        }
+        .paper-sheet-bg__first {
+          position: absolute;
+          right: -11px;
+          width: 341px;
+          height: 503px;
+        }
 
       .paper-sheet {
         background-position: 646% 124%, 0 100%;
@@ -1919,7 +2082,17 @@ body ul {
       .paper-sheet-top {
         background-size: 93% auto, auto auto;
         height: 88px;
+        margin-top: 45px;
       }
+
+
+        .paper-sheet-content__header {
+          font-size: 2rem;
+          width: 300px;
+        }
+        .paper-sheet-content__small-text {
+          width: 265px;
+        }
 
 /* Page Footer *//* Page Footer *//* Page Footer */
         .page-footer {
@@ -1928,6 +2101,11 @@ body ul {
           padding-right: var(--sidePadding);
           padding-right: var(--sidePadding);
         }
+
+          .page-footer__header,
+          .page-footer__under-header {
+            line-height: 1;
+          }
 
         .page-footer-list {
           float: none;
