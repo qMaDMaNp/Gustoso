@@ -142,14 +142,6 @@ body {
     margin: 5px 0;
     background: var(--white);
   }
-
-  &:hover ~ .navigation {
-    display: block;
-    position: absolute;
-    top: 70px;
-    background: rgba(86, 83, 76, .529);
-    z-index: 100;
-  }
 }
 
 .heading-logo {
@@ -158,6 +150,14 @@ body {
 
 .navigation {
   flex-grow: 0.14;
+}
+
+.navigation-open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  background: rgba(86, 83, 76, .529);
+  z-index: 100;
 }
 
 .navigation-list {
@@ -1121,6 +1121,14 @@ body {
   order: 1;
 }
 
+.navigation-open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  background: rgba(86, 83, 76, .529);
+  z-index: 100;
+}
+
 .navigation-list {
   flex-direction: column;
   &__item {
@@ -1292,6 +1300,14 @@ body {
   order: 1;
 }
 
+.navigation-open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  background: rgba(86, 83, 76, .529);
+  z-index: 100;
+}
+
 .navigation-list {
   flex-direction: column;
   &__item {
@@ -1306,13 +1322,13 @@ body {
   order: 3;
 }
 
-    .header-content__big-text {
-      width: 417px;
-      margin: 0 auto 56px;
-    }
-    .page-header::after {
-      bottom: -62px;
-    }
+.header-content__big-text {
+  width: 417px;
+  margin: 0 auto 56px;
+}
+.page-header::after {
+  bottom: -62px;
+}
 /* Cake Art *//* Cake Art *//* Cake Art */
     .art-of-cakes,
     .tastes-good-list {
@@ -1491,10 +1507,6 @@ body {
         display: block;
         margin-left: 5px;
         margin-right: 0;
-
-        &:hover ~ .social-list {
-          display: flex;
-        }
       }
 
       .heading-logo {
@@ -1507,6 +1519,14 @@ body {
         display: none;
         flex-grow: 0;
         order: 1;
+      }
+
+      .navigation-open {
+        display: block;
+        position: absolute;
+        top: 70px;
+        background: rgba(86, 83, 76, .529);
+        z-index: 100;
       }
 
       .navigation-list {
@@ -1526,6 +1546,10 @@ body {
         z-index: 100;
         background: rgba(86, 83, 76, .529);
         width: 169px;
+      }
+
+      .social-list-open {
+        display: flex;
       }
 
       .header-content__big-text {
@@ -1693,10 +1717,7 @@ body {
         display: block;
 
         &__second {
-          position: absolute;
-          right: 9px;
-          width: 341px;
-          height: 460px;
+          display: none;
         }
         &__first {
           position: absolute;
@@ -1862,4 +1883,48 @@ body {
             }
           }
         }
+}
+
+@media (width < 375px) {
+  :root {
+    --contWidth: 100%;
+    --sidePadding: 0px;
+    --paperWidth: 320px;
+    --paperHeight: 540px;
+  }
+
+/* Page Header *//* Page Header *//* Page Header */
+  .header-content__big-text {
+    font-size: 3rem;
+    width: 250px;
+    margin-bottom: 16px;
+  }
+
+  .header-content__small-text {
+    margin-bottom: 30px;
+  }
+
+/* Dishes Section *//* Dishes Section *//* Dishes Section */
+.ready-in {
+  top: 0;
+  right: 0;
+}
+
+/* Breakfast Section *//* Breakfast Section *//* Breakfast Section */
+  .paper-sheet-bg {
+    display: none;
+  }
+  .paper-sheet-wrap {
+    width: 320px;
+  }
+  .paper-sheet {
+    &__dash {
+      margin: 8px;
+    }
+  }
+
+/* Page Footer *//* Page Footer *//* Page Footer */
+  .page-footer-right-wrap__link {
+    width: 102px;
+  }
 }
