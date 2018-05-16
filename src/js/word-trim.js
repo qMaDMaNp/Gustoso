@@ -1,6 +1,6 @@
 var ourWord = document.getElementsByClassName("bottom-list__link")[0];
 var usWord = document.getElementsByClassName("bottom-list__link")[5];
-var windowSize = window.matchMedia("(max-width: 320px)");
+var windowSize = window.matchMedia("(max-width: 400px)");
 
 function myFunction(windowSize) {
   if (windowSize.matches) {
